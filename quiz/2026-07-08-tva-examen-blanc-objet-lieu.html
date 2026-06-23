@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Examen blanc TVA (objet, lieu, taux)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — TVA · cas tirés des exercices de la prof (objet de l'impôt, lieu, taux) + 2 questions dérivées.</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "Examen blanc — TVA (objet, lieu, taux)",
+  subtitle: "Cas des exercices 1 et 3 (LB/PS · lieu · traitement)",
+  questions: [
+    { type:"choice",
+      q:"Un garagiste à Samnaun répare la voiture de touristes italiens. Quel est l'objet de l'impôt ?",
+      options:[
+        {t:"Une livraison de biens (travail effectué sur un bien existant)", ok:true},
+        {t:"Une prestation de services", ok:false},
+        {t:"Une opération exclue du champ de l'impôt", ok:false}],
+      explain:"Les travaux sur un bien (réparation, montage, entretien…) sont assimilés à une LIVRAISON de biens (art. 3 let. d ch. 2 LTVA), même sans transfert de propriété." },
+
+    { type:"choice",
+      q:"Une fiduciaire basée à Zurich tient la comptabilité (à Vaduz) d'un client domicilié à Bombay (Inde). Où se situe le lieu de cette prestation ?",
+      options:[
+        {t:"À l'étranger (Bombay), au lieu du destinataire", ok:true},
+        {t:"En Suisse, au siège de la fiduciaire", ok:false},
+        {t:"Au Liechtenstein, là où le travail est exécuté", ok:false}],
+      explain:"La tenue de comptabilité est une prestation de services soumise au principe du lieu du destinataire (art. 8 al. 1 LTVA) : Bombay / étranger. Ni le siège du prestataire ni le lieu d'exécution ne comptent." },
+
+    { type:"choice",
+      q:"Une entreprise loue une pelleteuse qui sera utilisée sur un chantier à Morat. Quel est l'objet de l'impôt ?",
+      options:[
+        {t:"Une livraison de biens (mise à disposition d'un bien)", ok:true},
+        {t:"Une prestation de services", ok:false},
+        {t:"Une opération non imposable", ok:false}],
+      explain:"La location / mise à disposition d'un bien à des fins d'usage est une LIVRAISON (art. 3 let. d ch. 3 LTVA). Le lieu est là où se trouve le bien : Morat / CH (art. 7 al. 1 let. a)." },
+
+    { type:"choice",
+      q:"Un avocat de Berne facture à son client domicilié à Rome (I) sa défense lors d'un procès à Paris (F). Où se situe le lieu de la prestation ?",
+      options:[
+        {t:"À Rome (étranger), au lieu du destinataire", ok:true},
+        {t:"À Paris, là où se tient le procès", ok:false},
+        {t:"À Berne, au siège de l'avocat", ok:false}],
+      explain:"Prestation de services au principe du destinataire (art. 8 al. 1 LTVA) : le lieu est le domicile du client = Rome / étranger. Le lieu du procès (Paris) et le siège de l'avocat (Berne) ne sont pas déterminants." },
+
+    { type:"choice",
+      q:"Une entreprise nettoie et déblaie les routes pour le compte d'une commune. Quel est l'objet de l'impôt ?",
+      options:[
+        {t:"Une livraison de biens (travaux sur un bien immobilier)", ok:true},
+        {t:"Une prestation de services", ok:false},
+        {t:"Une opération exclue (prestation à une collectivité publique)", ok:false}],
+      explain:"Piège classique : le nettoyage / déblaiement de routes est un travail sur un bien (immobilier) → LIVRAISON (art. 3 let. d ch. 2 LTVA), imposable au taux normal. Ce n'est pas une prestation de services." },
+
+    { type:"choice",
+      q:"La vente d'une villa à Nyon est, en matière de TVA :",
+      options:[
+        {t:"Exclue du champ de l'impôt", ok:true},
+        {t:"Imposable au taux normal de 8,1 %", ok:false},
+        {t:"Exonérée avec droit à la déduction", ok:false}],
+      explain:"Le transfert d'un bien immobilier est une opération EXCLUE du champ de l'impôt (art. 21 al. 2 ch. 20 LTVA). Une option pour l'imposition reste possible (art. 22), sauf si le bien est affecté à l'habitation." },
+
+    { type:"choice",
+      q:"À quel taux est imposée la location d'une chambre d'hôtel avec petit-déjeuner ?",
+      options:[
+        {t:"Taux spécial hébergement de 3,8 %", ok:true},
+        {t:"Taux normal de 8,1 %", ok:false},
+        {t:"Taux réduit de 2,6 %", ok:false}],
+      explain:"La prestation d'hébergement (nuitée, petit-déjeuner inclus) relève du taux spécial de 3,8 % (art. 25 al. 4 LTVA)." },
+
+    { type:"choice",
+      q:"Comment traiter des intérêts moratoires facturés à un client pour retard de paiement ?",
+      options:[
+        {t:"Ils ne font pas partie de la contre-prestation : pas de TVA", ok:true},
+        {t:"Ils sont imposables au taux normal de 8,1 %", ok:false},
+        {t:"Ils sont exclus du champ comme prestation financière", ok:false}],
+      explain:"Les intérêts moratoires sont un dédommagement, pas la contrepartie d'une prestation : ils ne sont pas soumis (art. 18 al. 2 let. i LTVA)." },
+
+    { type:"num",
+      q:"Question dérivée — un hôtel facture une demi-pension à 519 CHF TVA comprise (taux hébergement 3,8 %). Quel est le montant de TVA contenu dans ce total ? (CHF, arrondi au centime)",
+      answer:19,
+      explain:"TVA incluse = montant TTC × 3,8 / 103,8 = 519 × 3,8 / 103,8 = 19,00. (On divise par 103,8 car les 519 contiennent déjà la TVA.)" },
+
+    { type:"choice",
+      q:"Question dérivée — un logiciel vendu sur une clé USB, puis le même logiciel vendu par téléchargement en ligne : comment qualifier ces deux opérations ?",
+      options:[
+        {t:"Clé USB = livraison de biens ; téléchargement = prestation de services", ok:true},
+        {t:"Les deux sont des livraisons de biens", ok:false},
+        {t:"Les deux sont des prestations de services", ok:false}],
+      explain:"Sur support physique (clé USB), il y a un bien remis → livraison (art. 3 let. d ch. 1). En téléchargement, aucun bien physique → prestation de services (art. 3 let. e), localisée chez le destinataire. La distinction change la règle de lieu (art. 7 vs art. 8)." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>
