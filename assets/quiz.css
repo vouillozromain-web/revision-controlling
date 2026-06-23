@@ -63,5 +63,5 @@ button.opt:disabled{cursor:default}
 @media (prefers-color-scheme:dark){
   :root{--bg:#16171a;--card:#1f2024;--ink:#e8e9ec;--muted:#9aa0a8;--line:#2e3036;
     --ok-bg:#16301f;--ok-ink:#6cd08e;--no-bg:#341a18;--no-ink:#f0938c;--shadow:none}
-  button.opt,.numrow input{background:#26282d}
+  button.opt,.numrow input,.openrow textarea,.selfgrade button{background:#26282d}
 }
