@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Assujettissement & CA déterminant</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — TVA · justifie toujours par un article (barème HES-SO).</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "Assujettissement & CA déterminant",
+  subtitle: "Art. 10-14 LTVA · cas type examen",
+  questions: [
+    { type:"num",
+      q:"Traductions SA (Lausanne) réalise : traductions à des clients en France 190'000 ; traductions à des clients en Suisse 50'000 ; cours d'anglais donnés à Lyon (formation, exclus art. 21) 60'000. Quel est le CA déterminant (CAD) ? (CHF)",
+      answer:240000,
+      explain:"CAD = CA mondial NON exclu. On compte 190'000 + 50'000 = 240'000. Les cours (exclus, art. 21) sortent du CAD. ≥ 100'000 → assujettissement obligatoire (art. 10 al. 2 let. a LTVA)." },
+
+    { type:"choice",
+      q:"Trading Sàrl (Genève) : vente de vêtements à l'étranger 70'000 ; vente de vêtements en Suisse 80'000 ; revenus d'intérêts 500 (exclus). La société est-elle assujettie ?",
+      options:[
+        {t:"Oui, obligatoirement (CAD 150'000 ≥ 100'000)", ok:true},
+        {t:"Non, libérée", ok:false},
+        {t:"Seulement de façon volontaire", ok:false}],
+      explain:"CAD = 70'000 + 80'000 = 150'000 (les intérêts, exclus, sortent). ≥ 100'000 → assujettissement obligatoire (art. 10 al. 2 let. a LTVA)." },
+
+    { type:"choice",
+      q:"Infoline SA (Nyon) : conseils à des clients en France 190'000 ; cours informatiques à Annecy 10'000 ; cours informatiques à Genève 40'000. Assujettie ?",
+      options:[
+        {t:"Non, libérée : sur le territoire suisse, elle ne fournit que des prestations exclues", ok:true},
+        {t:"Oui, car le CAD est de 190'000", ok:false},
+        {t:"Oui, dès le 1er cours donné", ok:false}],
+      explain:"Piège classique (art. 10 al. 2 let. d LTVA). Les conseils (190'000) sont fournis à des destinataires en France → lieu à l'étranger (art. 8 al. 1), donc pas 'sur le territoire suisse'. En Suisse, elle ne réalise que des cours (formation, exclus art. 21). → libérée de l'assujettissement." },
+
+    { type:"num",
+      q:"Une start-up est créée le 01.01. Son CA annuel probable ne peut pas être estimé au départ. Prestations réalisées du 01.01 au 31.03 : 32'000. Quel est le CAD ? (CHF)",
+      answer:128000,
+      explain:"Règle des 3 premiers mois : on annualise (× 4). 32'000 × 4 = 128'000 ≥ 100'000 → assujettie (art. 11 OTVA)." },
+
+    { type:"open",
+      q:"Question de cours : cite les trois critères de l'activité entrepreneuriale (art. 10 al. 1bis LTVA).",
+      answer:"1) Exercer à titre indépendant une activité professionnelle ou commerciale ; 2) en vue de réaliser, à partir de prestations, des recettes ayant un caractère de permanence ; 3) agir en son propre nom vis-à-vis des tiers.",
+      explain:"Les trois critères sont cumulatifs (art. 10 al. 1bis LTVA). Restitution fréquente dans l'exercice 'questions de cours'." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

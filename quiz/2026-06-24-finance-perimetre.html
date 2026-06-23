@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Périmètre & méthodes de consolidation</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — Finance · consolidation Swiss GAAP RPC (RPC 30).</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "Périmètre & méthodes de consolidation",
+  subtitle: "IG / IP / MEE · % contrôle et intérêt",
+  questions: [
+    { type:"choice",
+      q:"La holding H détient directement 80 % d'une société C (toutes domiciliées en Suisse). Quelle méthode d'intégration ?",
+      options:[
+        {t:"Intégration globale (IG)", ok:true},
+        {t:"Intégration proportionnelle (IP)", ok:false},
+        {t:"Mise en équivalence (MEE)", ok:false}],
+      explain:"Contrôle > 50 % (ici 80 %) → intégration globale (consolidation intégrale). On reprend 100 % des actifs/passifs et on isole la part des minoritaires." },
+
+    { type:"choice",
+      q:"H détient 30 % d'une société D (influence notable, pas de contrôle). Quelle méthode ?",
+      options:[
+        {t:"Mise en équivalence (MEE)", ok:true},
+        {t:"Intégration globale (IG)", ok:false},
+        {t:"Simple titre à la valeur actuelle", ok:false}],
+      explain:"Participation entre 20 % et 50 % = influence notable sans contrôle → mise en équivalence (MEE)." },
+
+    { type:"choice",
+      q:"H détient 12 % d'une société E, sans influence notable. Comment l'inscrire dans les comptes de groupe ?",
+      options:[
+        {t:"Comme un simple titre / investissement (valeur actuelle)", ok:true},
+        {t:"Par mise en équivalence", ok:false},
+        {t:"Par intégration proportionnelle", ok:false}],
+      explain:"En dessous de 20 % et sans influence notable, la participation n'entre pas dans le périmètre de consolidation : c'est un simple investissement financier (titre), évalué à la valeur actuelle." },
+
+    { type:"num",
+      q:"H détient 95 % de A, et A détient 40 % de L. Quel est le pourcentage d'INTÉRÊT de H dans L ? (en %, une décimale)",
+      answer:38,
+      explain:"Le % d'intérêt se calcule en MULTIPLIANT les taux le long de la chaîne : 95 % × 40 % = 38,0 %." },
+
+    { type:"open",
+      q:"Question de cours : explique en une phrase chacune des trois méthodes IG, IP et MEE (quand les utiliser).",
+      answer:"IG (intégration globale) : contrôle, en général > 50 % des voix → on reprend 100 % des comptes et on isole la part des minoritaires. IP (intégration proportionnelle) : contrôle conjoint (coentreprise, ~50 %) → on reprend la quote-part. MEE (mise en équivalence) : influence notable (20-50 %), sans contrôle → la participation est réévaluée à la part des fonds propres.",
+      explain:"Le critère décisif est le niveau de contrôle / d'influence sur la société détenue." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

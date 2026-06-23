@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — CO vs Swiss GAAP RPC</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — Finance · normes Swiss GAAP RPC.</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "Code des obligations vs Swiss GAAP RPC",
+  subtitle: "Normes Swiss GAAP RPC · différences",
+  questions: [
+    { type:"choice",
+      q:"Vrai ou faux : selon les Swiss GAAP RPC, les réserves latentes arbitraires sont autorisées.",
+      options:[
+        {t:"Faux : elles sont interdites (image fidèle / true & fair view)", ok:true},
+        {t:"Vrai : comme dans le Code des obligations", ok:false}],
+      explain:"Faux. Les Swiss GAAP RPC visent l'image fidèle et n'autorisent AUCUNE réserve latente arbitraire. Ce sont les comptes selon le CO (principe de prudence) qui les autorisent." },
+
+    { type:"choice",
+      q:"Vrai ou faux : les comptes établis selon les Swiss GAAP RPC sont déterminants pour le fisc et pour la distribution du bénéfice.",
+      options:[
+        {t:"Faux : ce sont les comptes selon le CO qui sont déterminants", ok:true},
+        {t:"Vrai", ok:false}],
+      explain:"Faux. Les comptes Swiss GAAP RPC ne sont PAS déterminants fiscalement ni pour la distribution du bénéfice. C'est le Code des obligations qui sert de base au fisc et à la distribution." },
+
+    { type:"choice",
+      q:"Quelle affirmation décrit correctement la nature des Swiss GAAP RPC ?",
+      options:[
+        {t:"Des recommandations (soft law) rédigées par une fondation", ok:true},
+        {t:"Une loi impérative adoptée par le Parlement", ok:false},
+        {t:"Un règlement fiscal cantonal", ok:false}],
+      explain:"Les Swiss GAAP RPC sont des recommandations (soft law, sans sanction juridique directe) émises par une fondation. Le Code des obligations, lui, est une loi adoptée par le Parlement." },
+
+    { type:"choice",
+      q:"Quel est le but principal des Swiss GAAP RPC ?",
+      options:[
+        {t:"Donner une image fidèle pour informer les investisseurs", ok:true},
+        {t:"Protéger les créanciers", ok:false},
+        {t:"Minimiser le bénéfice imposable", ok:false}],
+      explain:"Les Swiss GAAP RPC sont un outil de communication financière (image fidèle) destiné aux investisseurs. La protection des créanciers est l'optique du Code des obligations." },
+
+    { type:"open",
+      q:"Question de cours : cite trois différences entre le Code des obligations et les Swiss GAAP RPC.",
+      answer:"1) Le CO est une loi (règles impératives) ; les RPC sont des recommandations (soft law). 2) Les comptes CO sont déterminants pour le fisc et la distribution du bénéfice ; les comptes RPC ne le sont pas. 3) Le CO autorise les réserves latentes arbitraires (prudence) ; les RPC les interdisent (image fidèle). 4) Le CO vise la protection des créanciers ; les RPC informent les investisseurs.",
+      explain:"Trois différences suffisent. C'est un grand classique des questions vrai/faux et de cours." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

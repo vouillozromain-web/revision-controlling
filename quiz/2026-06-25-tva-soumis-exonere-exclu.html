@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Soumis / exonéré / exclu</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — TVA · justifie toujours par un article (barème HES-SO).</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "Soumis / exonéré / exclu",
+  subtitle: "Art. 18, 21 et 23 LTVA",
+  questions: [
+    { type:"choice",
+      q:"Une entreprise suisse vend des marchandises et les exporte en Allemagne (preuve d'exportation). Quel traitement TVA ?",
+      options:[
+        {t:"Exonéré (0 %, avec droit à la déduction de l'IP)", ok:true},
+        {t:"Exclu (sans droit à la déduction de l'IP)", ok:false},
+        {t:"Soumis à 8,1 %", ok:false}],
+      explain:"Exportation de biens = exonérée (art. 23 al. 2 ch. 1 LTVA) : imposée à 0 % mais donne droit à la déduction de l'impôt préalable." },
+
+    { type:"choice",
+      q:"Un médecin facture un traitement médical (médecine humaine). Quel traitement TVA ?",
+      options:[
+        {t:"Exclu du champ de l'impôt", ok:true},
+        {t:"Exonéré à 0 %", ok:false},
+        {t:"Soumis à 2,6 %", ok:false}],
+      explain:"Les traitements médicaux sont exclus du champ de l'impôt (art. 21 al. 2 ch. 3 LTVA) : pas de TVA, mais pas de droit à la déduction de l'IP." },
+
+    { type:"choice",
+      q:"Facturation d'une prime d'assurance maladie. Quel traitement TVA ?",
+      options:[
+        {t:"Exclu du champ de l'impôt", ok:true},
+        {t:"Exonéré", ok:false},
+        {t:"Soumis à 8,1 %", ok:false}],
+      explain:"Les prestations d'assurance sont exclues (art. 21 al. 2 ch. 18 LTVA). À noter : l'option (art. 22) est même interdite pour les assurances." },
+
+    { type:"choice",
+      q:"Vrai ou faux : la location d'un appartement de vacances est exclue de la TVA.",
+      options:[
+        {t:"Faux : c'est de l'hébergement, imposable au taux spécial 3,8 %", ok:true},
+        {t:"Vrai : toute location d'immeuble est exclue", ok:false}],
+      explain:"Faux. La location d'un logement de vacances est une prestation d'hébergement, imposable au taux spécial de 3,8 % (art. 25 al. 4 LTVA). Seule la location d'immeubles à usage durable d'habitation est exclue (art. 21 al. 2 ch. 21)." },
+
+    { type:"open",
+      q:"Question de cours : quelle est la différence entre une prestation EXCLUE et une prestation EXONÉRÉE ?",
+      answer:"Exclue (art. 21) : pas de TVA ET aucun droit à la déduction de l'impôt préalable. Exonérée (art. 23) : imposée à 0 % MAIS donne droit à la déduction de l'impôt préalable. L'exclue sort du CA déterminant, l'exonérée y reste.",
+      explain:"Piège récurrent : l'exonéré conserve le droit à la déduction de l'IP, pas l'exclu." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

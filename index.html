@@ -3,21 +3,51 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Révision Controlling 3ème — Quiz</title>
+<title>Révision Controlling 3ème — Programme de quiz</title>
 <link rel="stylesheet" href="assets/quiz.css">
+<style>
+.day{margin:0 0 8px;font-size:14px;color:var(--muted);font-weight:500;
+  padding-top:14px;border-top:1px solid var(--line)}
+.day:first-of-type{border-top:0;padding-top:0}
+.tag{display:inline-block;font-size:11px;font-weight:500;border-radius:6px;padding:2px 7px;margin-right:6px}
+.tag.tva{background:#e6f1fb;color:#0c447c}
+.tag.fin{background:#e7f6ec;color:#1c7a3f}
+@media (prefers-color-scheme:dark){.tag.tva{background:#0c447c;color:#cfe3fb}.tag.fin{background:#16301f;color:#9fe1cb}}
+</style>
 </head>
 <body>
 <div class="wrap">
   <header class="top">
     <div>
       <h1>Révision Controlling 3ème</h1>
-      <p class="sub">Quiz TVA &amp; Finance · examen d'août 2026</p>
+      <p class="sub">Programme de quiz · examen d'août 2026 · TVA &amp; Finance</p>
     </div>
   </header>
-  <ul class="list" id="list">
-    <li><a href="quiz/2026-06-23-lieu-des-prestations.html">Lieu des prestations (TVA)<div class="d">23.06.2026 · art. 7 et 8 LTVA</div></a></li>
+
+  <p class="day">Mardi 23 juin</p>
+  <ul class="list">
+    <li><a href="quiz/2026-06-23-lieu-des-prestations.html"><span class="tag tva">TVA</span>Lieu des prestations<div class="d">art. 7 et 8 LTVA</div></a></li>
   </ul>
-  <p class="foot">Un nouveau quiz est ajouté chaque matin. Bon courage !</p>
+
+  <p class="day">Mercredi 24 juin</p>
+  <ul class="list">
+    <li><a href="quiz/2026-06-24-tva-assujettissement.html"><span class="tag tva">TVA</span>Assujettissement &amp; CA déterminant<div class="d">art. 10-14 LTVA</div></a></li>
+    <li><a href="quiz/2026-06-24-finance-perimetre.html"><span class="tag fin">FIN</span>Périmètre &amp; méthodes de consolidation<div class="d">IG / IP / MEE</div></a></li>
+  </ul>
+
+  <p class="day">Jeudi 25 juin</p>
+  <ul class="list">
+    <li><a href="quiz/2026-06-25-tva-soumis-exonere-exclu.html"><span class="tag tva">TVA</span>Soumis / exonéré / exclu<div class="d">art. 18, 21 et 23 LTVA</div></a></li>
+    <li><a href="quiz/2026-06-25-finance-goodwill.html"><span class="tag fin">FIN</span>Goodwill &amp; consolidation du capital<div class="d">écart de consolidation</div></a></li>
+  </ul>
+
+  <p class="day">Vendredi 26 juin</p>
+  <ul class="list">
+    <li><a href="quiz/2026-06-26-tva-impot-prealable-cordip.html"><span class="tag tva">TVA</span>Impôt préalable &amp; CORDIP<div class="d">art. 28-30 LTVA</div></a></li>
+    <li><a href="quiz/2026-06-26-finance-co-vs-rpc.html"><span class="tag fin">FIN</span>CO vs Swiss GAAP RPC<div class="d">normes Swiss GAAP RPC</div></a></li>
+  </ul>
+
+  <p class="foot">D'autres jours sont ajoutés régulièrement jusqu'à l'examen. Reviens chaque matin faire les quiz du jour !</p>
 </div>
 </body>
 </html>

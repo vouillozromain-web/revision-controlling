@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Impôt préalable & CORDIP</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — TVA · justifie toujours par un article (barème HES-SO).</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "Impôt préalable & CORDIP",
+  subtitle: "Art. 28-30 LTVA · double affectation",
+  questions: [
+    { type:"choice",
+      q:"Une dépense (et son impôt préalable) sert à la fois à une activité SOUMISE et à une activité EXCLUE. Que faut-il faire de l'impôt préalable ?",
+      options:[
+        {t:"Le corriger proportionnellement à l'utilisation (CORDIP)", ok:true},
+        {t:"Le déduire en totalité", ok:false},
+        {t:"Ne rien déduire du tout", ok:false}],
+      explain:"Cas de double affectation : l'impôt préalable doit être corrigé en proportion de l'utilisation (CORDIP, art. 30 LTVA). Méthode des 3 pots : A déductible, B non déductible, C à corriger selon une clé." },
+
+    { type:"num",
+      q:"Jo Garage SA : CA soumis 70 %, auto-école (CA exclu) 30 %. IP directement attribuable au CA soumis = 33'000 ; IP non directement attribuable = 5'000. Quel est l'impôt préalable déductible (méthode de l'affectation partielle) ? (CHF)",
+      answer:36500,
+      explain:"IP soumis directement attribuable = 33'000 (déductible en totalité). IP non directement attribuable 5'000 corrigé selon la clé du CA exclu (30 %) : CORDIP = 5'000 × 30 % = 1'500, donc déductible 5'000 − 1'500 = 3'500. Total = 33'000 + 3'500 = 36'500." },
+
+    { type:"num",
+      q:"Dans le même cas, quel est le montant de la CORDIP (correction de l'impôt préalable) sur les 5'000 non directement attribuables ? (CHF)",
+      answer:1500,
+      explain:"CORDIP = 5'000 × 30 % (part du CA exclu) = 1'500. C'est la part d'IP qui n'est PAS déductible." },
+
+    { type:"choice",
+      q:"Quelles clés de répartition peut-on utiliser pour la CORDIP en cas de double affectation ?",
+      options:[
+        {t:"Surface (m²), chiffre d'affaires, heures de travail, effectif du personnel", ok:true},
+        {t:"Uniquement le chiffre d'affaires", ok:false},
+        {t:"Uniquement la surface des locaux", ok:false}],
+      explain:"Plusieurs clés sont admises (art. 65 OTVA) : surface (m²/m³), chiffre d'affaires, heures de travail, quotient de l'effectif… On choisit la clé la plus représentative de l'utilisation." },
+
+    { type:"open",
+      q:"Question de cours : quelle est la différence entre la CORDIP et la REDIP ?",
+      answer:"CORDIP (art. 30 LTVA) = correction de l'impôt préalable en cas de double affectation : un bien sert à la fois à des activités donnant droit à la déduction et à des activités n'y donnant pas (ex. exclues, art. 21). REDIP (art. 33 LTVA) = réduction de l'impôt préalable en proportion des subventions et fonds reçus (art. 18 al. 2 let. a à c).",
+      explain:"CORDIP = double affectation (soumis/exclu). REDIP = à cause de subventions. À ne pas confondre." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

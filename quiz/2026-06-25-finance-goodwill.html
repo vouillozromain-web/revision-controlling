@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Goodwill & consolidation du capital</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — Finance · consolidation Swiss GAAP RPC.</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "Goodwill & consolidation du capital",
+  subtitle: "Écart de consolidation · amortissement",
+  questions: [
+    { type:"num",
+      q:"H acquiert 70 % de F pour 300. À la date d'acquisition, F présente : capital-actions 300 et réserves de primes 100 (valeurs déjà retraitées). Quel est le goodwill ? (CHF)",
+      answer:20,
+      explain:"Capitaux propres à l'acquisition = 300 + 100 = 400. Part du groupe = 70 % × 400 = 280. Goodwill = prix 300 − 280 = 20." },
+
+    { type:"num",
+      q:"Ce goodwill de 20 est amorti linéairement sur 5 ans. Quel est l'amortissement annuel ? (CHF)",
+      answer:4,
+      explain:"20 ÷ 5 = 4 par an. (Selon la RPC 10, durée en principe 5 ans, maximum 20 ans.)" },
+
+    { type:"num",
+      q:"Toujours ce goodwill de 20 amorti sur 5 ans : quelle est sa valeur comptable nette après 3 ans ? (CHF)",
+      answer:8,
+      explain:"VNC = 20 − (3 × 4) = 8." },
+
+    { type:"choice",
+      q:"Quand parle-t-on d'un goodwill (et non d'un badwill) ?",
+      options:[
+        {t:"Quand le prix d'acquisition est SUPÉRIEUR à la part des fonds propres réévalués acquis", ok:true},
+        {t:"Quand le prix est INFÉRIEUR à la part des fonds propres acquis", ok:false},
+        {t:"Quand la filiale réalise un bénéfice", ok:false}],
+      explain:"Goodwill = prix payé > part des CP réévalués → on amortit. Badwill = prix payé < part des CP → on le dissout sur la durée." },
+
+    { type:"open",
+      q:"Question de cours : explique comment on calcule l'écart de consolidation et la différence entre goodwill et badwill.",
+      answer:"Écart de consolidation = prix d'acquisition − (part du groupe × capitaux propres réévalués / BC2 à la date d'acquisition). S'il est positif = goodwill (on a payé plus que la valeur des fonds propres → amorti, en principe sur 5 ans). S'il est négatif = badwill (on a payé moins → dissous sur la durée).",
+      explain:"Le point clé : prendre les capitaux propres RÉÉVALUÉS (BC2) à la date d'acquisition, multipliés par la part du groupe." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>
