@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Lieu des prestations</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — TVA · justifie toujours par un article (barème HES-SO).</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "Lieu des prestations",
+  subtitle: "Art. 7 et 8 LTVA · TVA suisse",
+  questions: [
+    { type:"choice",
+      q:"Un avocat domicilié à Lausanne facture un conseil juridique à une société domiciliée en France. Où se situe le lieu de la prestation ?",
+      options:[
+        {t:"En France (lieu du destinataire)", ok:true},
+        {t:"En Suisse (lieu du prestataire)", ok:false},
+        {t:"Au lieu d'exécution matérielle", ok:false}],
+      explain:"Le conseil ne figure pas dans la liste de l'art. 8 al. 2 : on applique le principe du destinataire (art. 8 al. 1 LTVA). Lieu = France, donc prestation à l'étranger, pas de TVA suisse." },
+
+    { type:"choice",
+      q:"Un orchestre anime une soirée musicale dans un restaurant à Montreux. Où se situe le lieu de cette prestation ?",
+      options:[
+        {t:"Lieu d'exécution matérielle (Montreux)", ok:true},
+        {t:"Lieu du destinataire (le restaurant)", ok:false},
+        {t:"Siège de l'orchestre", ok:false}],
+      explain:"Prestation culturelle/artistique fournie à des personnes présentes → lieu d'exécution matérielle (art. 8 al. 2 let. c LTVA)." },
+
+    { type:"choice",
+      q:"Une fiduciaire à Montreux gère un immeuble situé à Annemasse (France). Où se situe le lieu de la prestation ?",
+      options:[
+        {t:"Lieu de situation de l'immeuble (France)", ok:true},
+        {t:"Siège de la fiduciaire (Montreux)", ok:false},
+        {t:"Lieu du destinataire", ok:false}],
+      explain:"Prestation en relation avec un bien immobilier (administration, expertise…) → lieu de l'immeuble (art. 8 al. 2 let. f LTVA). Immeuble en France = pas de TVA suisse." },
+
+    { type:"choice",
+      q:"Un physiothérapeute exerçant à Sion traite un patient venu d'Italie, dans son cabinet. Où se situe le lieu de la prestation ?",
+      options:[
+        {t:"Là où le prestataire exerce (Sion)", ok:true},
+        {t:"Lieu du destinataire (Italie)", ok:false},
+        {t:"Lieu d'exécution matérielle uniquement si exporté", ok:false}],
+      explain:"Prestation de soins fournie directement à une personne physique présente → lieu où le prestataire a son domicile / exerce son activité (art. 8 al. 2 let. a LTVA)." },
+
+    { type:"choice",
+      q:"Une entreprise suisse transporte des biens pour un client domicilié en Allemagne (transport de marchandises). Où se situe le lieu de la prestation ?",
+      options:[
+        {t:"Lieu du destinataire (Allemagne)", ok:true},
+        {t:"Là où s'effectue le transport", ok:false},
+        {t:"Lieu de départ des biens", ok:false}],
+      explain:"Le transport de BIENS suit le principe général : lieu du destinataire (art. 8 al. 1 LTVA). Attention à ne pas confondre avec le transport de PASSAGERS (let. e = là où s'effectue le transport)." },
+
+    { type:"choice",
+      q:"Un commerçant suisse vend une machine et l'expédie depuis son entrepôt de Zurich vers un client à Lyon. Où se situe le lieu de la livraison ?",
+      options:[
+        {t:"À Zurich (lieu où le bien se trouve au début du transport)", ok:true},
+        {t:"À Lyon (lieu d'arrivée)", ok:false},
+        {t:"Au siège du client", ok:false}],
+      explain:"Livraison de biens expédiés/transportés par le fournisseur → lieu où le bien se trouve au début du transport (art. 7 al. 1 let. b LTVA). Le lieu est en Suisse, mais l'exportation prouvée est ensuite exonérée (art. 23)." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>
