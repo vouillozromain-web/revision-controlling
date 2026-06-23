@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Examen blanc CC 2023</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — Finance · questions de l'examen CC du 06.11.2023 (Mme Vullyamoz) + 2 questions dérivées.</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "Examen blanc — CC 2023 (consolidation)",
+  subtitle: "Questions de l'examen du 06.11.2023",
+  questions: [
+    { type:"choice",
+      q:"Une personne morale contrôle une autre entreprise lorsque…",
+      options:[
+        {t:"Elle dispose directement ou indirectement d'une majorité des voix", ok:true},
+        {t:"Elle dispose directement d'une majorité des voix", ok:false},
+        {t:"Elle dispose d'une majorité des voix en vertu des statuts, de l'acte de fondation ou d'un contrat", ok:false}],
+      explain:"Le contrôle existe dès qu'on détient la majorité des voix, que ce soit directement OU indirectement (via une sous-filiale). Les deux autres formulations sont trop restrictives." },
+
+    { type:"choice",
+      q:"Dans les comptes individuels, les titres de participation sont évalués…",
+      options:[
+        {t:"À leur valeur d'acquisition ou à leur juste valeur", ok:true},
+        {t:"Selon les méthodes d'intégration : globale, proportionnelle, mise en équivalence", ok:false},
+        {t:"À leur valeur boursière pour les sociétés cotées, à la valeur d'acquisition pour les non cotées", ok:false}],
+      explain:"Évaluation à la valeur d'acquisition ou à la juste valeur. Les méthodes d'intégration (globale/proportionnelle/MEE) concernent la consolidation, pas l'évaluation d'un titre dans les comptes individuels." },
+
+    { type:"choice",
+      q:"Quelle entreprise a l'obligation d'établir des comptes consolidés selon une norme reconnue ?",
+      options:[
+        {t:"Les sociétés cotées en bourse", ok:true},
+        {t:"Les personnes morales dépassant deux des trois valeurs seuils sur deux exercices consécutifs", ok:false},
+        {t:"Les entreprises soumises au contrôle ordinaire", ok:false}],
+      explain:"Les sociétés cotées doivent présenter leurs comptes consolidés selon une norme reconnue (Swiss GAAP RPC, IFRS, US GAAP). Le dépassement des seuils crée l'obligation de consolider, mais pas forcément selon une norme reconnue." },
+
+    { type:"choice",
+      q:"Le groupe de sociétés se définit comme :",
+      options:[
+        {t:"Deux ou plusieurs sociétés juridiquement indépendantes sous une direction unique", ok:true},
+        {t:"Deux ou plusieurs sociétés disposant de leur propre personnalité juridique et poursuivant un but commun", ok:false},
+        {t:"Deux ou plusieurs sociétés dont les activités économiques sont semblables et organisées sous forme de groupe", ok:false}],
+      explain:"La notion clé est la DIRECTION UNIQUE (le contrôle) exercée sur des sociétés juridiquement indépendantes. Ni le but commun ni la similarité des activités ne définissent un groupe." },
+
+    { type:"choice",
+      q:"Les comptes annuels consolidés d'un groupe se composent de :",
+      options:[
+        {t:"Bilan, compte de résultat, tableau de flux de trésorerie, tableau des capitaux propres, annexe", ok:true},
+        {t:"Rapport annuel, bilan, compte de résultat, tableau de flux de trésorerie, tableau des capitaux propres, annexe", ok:false},
+        {t:"Rapport de gestion, bilan, compte de résultat, tableau de flux de trésorerie, tableau des capitaux propres", ok:false}],
+      explain:"Cinq éléments : bilan, compte de résultat, tableau de flux de trésorerie, tableau des capitaux propres et annexe. Le rapport annuel / de gestion n'en fait pas partie." },
+
+    { type:"choice",
+      q:"Pourquoi est-il important de distinguer les intérêts minoritaires dans les états financiers consolidés ?",
+      options:[
+        {t:"Pour refléter fidèlement la part de propriété détenue par les actionnaires extérieurs au groupe consolidant", ok:true},
+        {t:"Pour faciliter l'établissement de la proposition de répartition du résultat", ok:false},
+        {t:"Pour respecter les obligations légales", ok:false}],
+      explain:"L'intégration globale additionne 100 % des actifs/passifs de la filiale, même si le groupe n'en détient pas la totalité. Distinguer les minoritaires donne une image fidèle de ce qui revient aux actionnaires extérieurs." },
+
+    { type:"choice",
+      q:"À qui sont destinés en premier lieu les états financiers consolidés ?",
+      options:[
+        {t:"Aux actionnaires de la société mère du groupe", ok:true},
+        {t:"Aux actionnaires et à l'État (administration fiscale)", ok:false},
+        {t:"Aux actionnaires des sociétés faisant partie du périmètre du groupe", ok:false}],
+      explain:"Les comptes consolidés s'adressent d'abord aux actionnaires de la mère, qui veulent voir la situation économique de l'ensemble qu'ils contrôlent. Ils n'ont pas de portée fiscale directe (l'impôt se calcule sur les comptes individuels)." },
+
+    { type:"num",
+      q:"Problème 1 — H SA acquiert 60 % de F SA pour 156. À l'acquisition (1.01.20_1) : capital-actions 150 et réserves de capital 10. Quel goodwill apparaît à la consolidation ? (Mfrs)",
+      answer:60,
+      explain:"Capitaux propres acquis = 60 % × (150 + 10) = 60 % × 160 = 96. Goodwill = prix payé − part acquise = 156 − 96 = 60." },
+
+    { type:"num",
+      q:"Question dérivée — ce goodwill de 60 est amorti linéairement sur 6 ans. Quelle est sa valeur comptable au bilan consolidé au 31.12.20_3 ? (Mfrs)",
+      answer:30,
+      explain:"Amortissement annuel = 60 / 6 = 10. De l'acquisition (1.01.20_1) au 31.12.20_3 = 3 ans écoulés → amortissement cumulé = 3 × 10 = 30. Valeur comptable = 60 − 30 = 30." },
+
+    { type:"choice",
+      q:"Question dérivée — selon les Swiss GAAP RPC, comment traite-t-on le goodwill issu d'une acquisition ?",
+      options:[
+        {t:"Il est activé puis amorti systématiquement sur sa durée d'utilité (en règle générale 5 ans, jusqu'à 20 ans si justifié)", ok:true},
+        {t:"Il n'est jamais amorti et fait seulement l'objet d'un test de dépréciation annuel", ok:false},
+        {t:"Il est obligatoirement passé en charges immédiatement, sans activation", ok:false}],
+      explain:"Swiss GAAP RPC : le goodwill est activé puis amorti sur sa durée d'utilité (une compensation directe avec les capitaux propres reste possible, avec indication dans l'annexe). L'absence d'amortissement avec simple test de dépréciation est la logique IFRS, pas RPC." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>
