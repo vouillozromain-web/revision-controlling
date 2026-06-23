@@ -34,7 +34,31 @@
       if(answered===total) finish();
     }
 
-    if(item.type === "num"){
+    if(item.type === "open"){
+      var orow = document.createElement("div");
+      orow.className = "openrow";
+      var ta = document.createElement("textarea");
+      ta.placeholder = item.placeholder || "Rédige ta réponse, puis affiche le corrigé…";
+      var rv = document.createElement("button");
+      rv.className = "reveal"; rv.textContent = "Voir la réponse";
+      var model = document.createElement("div");
+      model.className = "model";
+      model.innerHTML = '<div class="lbl">Réponse attendue</div>'+esc(item.answer||"");
+      var sg = document.createElement("div");
+      sg.className = "selfgrade";
+      var yes = document.createElement("button"); yes.className = "yes"; yes.textContent = "J'avais juste";
+      var no = document.createElement("button"); no.className = "no"; no.textContent = "À revoir";
+      sg.appendChild(yes); sg.appendChild(no);
+      rv.onclick = function(){
+        if(model.style.display === "block") return;
+        ta.disabled = true; rv.style.display = "none";
+        model.style.display = "block"; sg.style.display = "flex";
+      };
+      yes.onclick = function(){ if(card.dataset.done) return; sg.style.display="none"; reveal(true); };
+      no.onclick = function(){ if(card.dataset.done) return; sg.style.display="none"; reveal(false); };
+      orow.appendChild(ta); orow.appendChild(rv);
+      card.appendChild(orow); card.appendChild(model); card.appendChild(sg);
+    } else if(item.type === "num"){
       var row = document.createElement("div");
       row.className = "numrow";
       var inp = document.createElement("input");

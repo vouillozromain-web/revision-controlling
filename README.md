@@ -21,11 +21,13 @@ URL publique : https://vouillozromain-web.github.io/revision-controlling/
          options:[ {t:"…", ok:true}, {t:"…", ok:false} ],
          explain:"Correction + article (ex. art. 8 al. 2 let. c LTVA)." },
        { type:"num", q:"…", answer:240000,
-         explain:"Explication du calcul + article." }
+         explain:"Explication du calcul + article." },
+       { type:"open", q:"…", answer:"Réponse modèle attendue (texte).",
+         explain:"Précision + article." }
      ]
    };
    ```
-   - `type:"choice"` = QCM (une seule option `ok:true`). `type:"num"` = réponse chiffrée (comparée à `answer`, arrondie).
+   - `type:"choice"` = QCM (une seule option `ok:true`). `type:"num"` = réponse chiffrée (comparée à `answer`, arrondie). `type:"open"` = réponse libre : l'utilisateur rédige, affiche la réponse modèle (`answer`), puis s'auto-évalue. Idéal pour les questions de cours et les vrai/faux justifiés.
    - Pour la TVA, `explain` doit citer l'article (barème HES-SO).
 3. Ajouter une ligne `<li>` en tête de la liste dans `index.html`.
 4. `git add -A && git commit -m "Quiz du JJ.MM" && git push`.
