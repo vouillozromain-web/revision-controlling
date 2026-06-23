@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Écritures de consolidation du capital</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — Finance · normes Swiss GAAP RPC.</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "Écritures de consolidation du capital",
+  subtitle: "Élimination de la participation (IG)",
+  questions: [
+    { type:"choice",
+      q:"Lors de la consolidation du capital (BC1), contre quoi élimine-t-on la valeur comptable de la participation détenue par la mère ?",
+      options:[
+        {t:"Contre les capitaux propres de la filiale à la date d'acquisition", ok:true},
+        {t:"Contre le chiffre d'affaires de la filiale", ok:false},
+        {t:"Contre la trésorerie du groupe", ok:false}],
+      explain:"On élimine la participation (actif de la mère) contre la quote-part des capitaux propres de la filiale à l'acquisition (capital + réserves). L'écart éventuel devient goodwill ou badwill." },
+
+    { type:"num",
+      q:"M achète 100 % de F pour 800. À l'acquisition, F a un capital-actions de 500 et des réserves de 200. Quel goodwill apparaît à la consolidation ? (CHF)",
+      answer:100,
+      explain:"Capitaux propres acquis = 500 + 200 = 700. Goodwill = prix payé − part acquise des CP = 800 − 700 = 100." },
+
+    { type:"open",
+      q:"Donnez l'écriture d'élimination de la participation pour ce cas (M détient 100 % de F : capital 500, réserves 200, participation 800, goodwill 100).",
+      answer:"Débit Capital-actions F 500 / Débit Réserves F 200 / Débit Goodwill 100 // Crédit Participation 800. On annule les capitaux propres de la filiale et la participation de la mère ; la différence est portée en goodwill à l'actif consolidé.",
+      explain:"On « efface » les CP de F et la participation de M ; l'écart positif = goodwill (actif)." },
+
+    { type:"num",
+      q:"M achète 80 % de F pour 640. CP de F à l'acquisition = 700 (capital 500 + réserves 200). Quel goodwill apparaît (méthode de la part du groupe) ? (CHF)",
+      answer:80,
+      explain:"Part acquise des CP = 80 % × 700 = 560. Goodwill = 640 − 560 = 80. Les 20 % restants (140) forment les intérêts minoritaires." },
+
+    { type:"choice",
+      q:"Dans ce dernier cas (80 %), à combien s'élèvent les intérêts minoritaires (part des minoritaires dans les CP de F) à l'acquisition ?",
+      options:[
+        {t:"140 CHF (20 % de 700)", ok:true},
+        {t:"80 CHF", ok:false},
+        {t:"560 CHF", ok:false}],
+      explain:"Intérêts minoritaires = 20 % × 700 = 140. Ils figurent dans les capitaux propres consolidés, distincts de la part du groupe." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

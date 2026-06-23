@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Parts privées véhicules</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — TVA · justifie toujours par un article (barème HES-SO).</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "Parts privées véhicules",
+  subtitle: "Usage privé d'un véhicule d'entreprise",
+  questions: [
+    { type:"choice",
+      q:"Pourquoi faut-il décompter une « part privée » sur un véhicule d'entreprise utilisé aussi à titre privé ?",
+      options:[
+        {t:"Parce que l'usage privé est une prestation à soi-même : l'impôt préalable déduit doit être corrigé pour la part privée", ok:true},
+        {t:"Parce que les véhicules sont exclus de la TVA", ok:false},
+        {t:"Parce que l'usage privé est exonéré", ok:false}],
+      explain:"L'entreprise a déduit l'IP sur l'achat et l'entretien ; la part d'usage privé ne donne pas droit à déduction. On corrige donc via une part privée imposable (prestation à soi-même)." },
+
+    { type:"choice",
+      q:"Quel est le forfait mensuel admis par l'AFC pour la part privée d'un véhicule ?",
+      options:[
+        {t:"0,9 % du prix d'achat (hors TVA) par mois, soit 10,8 % par an", ok:true},
+        {t:"5 % du prix d'achat par mois", ok:false},
+        {t:"0,9 % du prix d'achat par an", ok:false}],
+      explain:"Forfait : 0,9 %/mois du prix d'achat HT (au moins 150 CHF/mois), soit 10,8 %/an. La TVA est due sur cette base au taux normal." },
+
+    { type:"num",
+      q:"Véhicule acheté 48'000 CHF HT, utilisé en partie à titre privé toute l'année. Quelle est la base annuelle de la part privée (forfait) ? (CHF)",
+      answer:5184,
+      explain:"0,9 %/mois × 12 = 10,8 %/an. Base = 48'000 × 10,8 % = 5'184 CHF par an." },
+
+    { type:"num",
+      q:"Sur cette base annuelle de 5'184 CHF, quelle TVA l'entreprise doit-elle décompter au taux normal de 8,1 % ? (CHF, arrondi au centime)",
+      answer:419.9,
+      explain:"TVA = 5'184 × 8,1 % = 419,904 ≈ 419,90 CHF. C'est l'impôt dû sur la part privée pour l'année." },
+
+    { type:"open",
+      q:"Question de cours : le forfait de 0,9 %/mois est-il la seule méthode admise pour déterminer la part privée d'un véhicule ?",
+      answer:"Non. Le forfait de 0,9 %/mois (min. 150 CHF/mois) est la méthode simplifiée admise par l'AFC. L'entreprise peut aussi recourir à la méthode effective : déterminer la part privée d'après les kilomètres réellement parcourus à titre privé (carnet de bord / journal de courses) rapportés au total des kilomètres et aux coûts effectifs du véhicule. La méthode effective demande une documentation précise mais peut être plus avantageuse selon l'usage réel.",
+      explain:"Deux voies : forfait 0,9 %/mois (simple) ou méthode effective au prorata kilométrique (documentée)." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

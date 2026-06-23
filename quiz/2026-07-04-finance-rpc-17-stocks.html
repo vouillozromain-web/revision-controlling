@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Stocks (RPC 17)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — Finance · normes Swiss GAAP RPC.</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "Stocks (RPC 17)",
+  subtitle: "Évaluation au plus bas",
+  questions: [
+    { type:"choice",
+      q:"Selon la RPC 17, à quelle valeur les stocks sont-ils évalués au bilan ?",
+      options:[
+        {t:"Au plus bas du coût d'acquisition/production et de la valeur nette de réalisation", ok:true},
+        {t:"Toujours au prix de vente prévu", ok:false},
+        {t:"Toujours au coût d'acquisition, sans correction", ok:false}],
+      explain:"Principe d'imparité / prudence : on retient le minimum entre le coût (acquisition ou production) et la valeur nette de réalisation (prix de vente net estimé). RPC 17." },
+
+    { type:"num",
+      q:"Un lot de marchandises a coûté 5'000. Il peut être vendu pour 6'000 mais 800 de frais de vente restent à engager. À quelle valeur figure-t-il au bilan ? (CHF)",
+      answer:5000,
+      explain:"Valeur nette de réalisation = 6'000 − 800 = 5'200. On compare au coût 5'000 et on prend le plus bas = 5'000. Pas de correction." },
+
+    { type:"num",
+      q:"Même lot acheté 5'000, mais la valeur nette de réalisation tombe à 4'300 (prix de vente 5'000 − 700 de frais). Quelle dépréciation faut-il comptabiliser ? (CHF)",
+      answer:700,
+      explain:"Valeur nette de réalisation = 5'000 − 700 = 4'300 < coût 5'000. On évalue à 4'300 → dépréciation de 5'000 − 4'300 = 700." },
+
+    { type:"choice",
+      q:"Quelles méthodes d'évaluation des sorties de stock la RPC 17 admet-elle ?",
+      options:[
+        {t:"FIFO, coût moyen pondéré (et d'autres méthodes reflétant le flux réel) — pas le LIFO", ok:true},
+        {t:"Uniquement le LIFO", ok:false},
+        {t:"N'importe quelle méthode, sans contrainte", ok:false}],
+      explain:"La RPC admet le FIFO et le coût moyen pondéré (CMP) notamment. Le LIFO n'est pas conforme car il ne reflète pas un flux réaliste des stocks." },
+
+    { type:"open",
+      q:"Question de cours : qu'est-ce que la « réserve latente » sur stock tolérée par le Code des obligations mais refusée par les Swiss GAAP RPC ?",
+      answer:"Le CO autorise un sous-évaluation supplémentaire des stocks (« tiers warrantage » / réserve de change de marchandises) : on peut amortir jusqu'à un tiers de la valeur des stocks au-delà de toute nécessité économique, créant une réserve latente. Les Swiss GAAP RPC l'interdisent : les stocks doivent être évalués au plus bas du coût et de la valeur nette de réalisation, sans sous-évaluation arbitraire, pour donner une image fidèle (true and fair view). C'est une différence majeure CO vs RPC.",
+      explain:"CO : réserve latente d'un tiers admise. RPC : interdite — image fidèle, évaluation au plus bas sans excès de prudence." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

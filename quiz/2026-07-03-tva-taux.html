@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Les taux d'imposition (art. 25 LTVA)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — TVA · justifie toujours par un article (barème HES-SO).</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "Les taux d'imposition (art. 25)",
+  subtitle: "Taux en vigueur depuis le 1.1.2024",
+  questions: [
+    { type:"choice",
+      q:"Quel est le taux NORMAL de la TVA en vigueur depuis le 1.1.2024 ?",
+      options:[
+        {t:"8,1 %", ok:true},
+        {t:"7,7 %", ok:false},
+        {t:"8,0 %", ok:false}],
+      explain:"Depuis le 1.1.2024 : taux normal 8,1 % (auparavant 7,7 %). Réduit 2,6 % et spécial hébergement 3,8 %." },
+
+    { type:"choice",
+      q:"Quel est le taux SPÉCIAL applicable aux prestations d'hébergement (nuitée + petit-déjeuner) ?",
+      options:[
+        {t:"3,8 %", ok:true},
+        {t:"2,6 %", ok:false},
+        {t:"8,1 %", ok:false}],
+      explain:"Taux spécial hébergement = 3,8 % (art. 25 al. 4 LTVA), pour la nuitée petit-déjeuner inclus." },
+
+    { type:"choice",
+      q:"Lequel de ces biens N'EST PAS imposé au taux réduit de 2,6 % ?",
+      options:[
+        {t:"Les boissons alcooliques", ok:true},
+        {t:"Les denrées alimentaires", ok:false},
+        {t:"Les livres et journaux", ok:false}],
+      explain:"Le taux réduit 2,6 % couvre denrées alimentaires (hors restauration), médicaments, journaux/livres, eau du réseau, etc. Les boissons alcooliques et le tabac sont au taux normal (art. 25 al. 2)." },
+
+    { type:"num",
+      q:"Un hôtel facture une nuitée petit-déjeuner inclus à 200 CHF HT, plus un repas au restaurant à 50 CHF HT (taux normal). Quel est le total de TVA due ? (CHF, arrondi au centime)",
+      answer:11.65,
+      explain:"Hébergement : 200 × 3,8 % = 7,60. Restauration : 50 × 8,1 % = 4,05. Total TVA = 7,60 + 4,05 = 11,65." },
+
+    { type:"open",
+      q:"Question de cours : citez les trois taux de TVA actuels et un exemple de prestation pour chacun.",
+      answer:"Taux normal 8,1 % : la plupart des biens et services (vêtements, électronique, restauration, conseil…). Taux réduit 2,6 % : denrées alimentaires, médicaments, livres, journaux, eau du réseau. Taux spécial hébergement 3,8 % : nuitées d'hôtel petit-déjeuner inclus.",
+      explain:"8,1 % normal · 2,6 % réduit (besoins de base) · 3,8 % hébergement (art. 25 LTVA)." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

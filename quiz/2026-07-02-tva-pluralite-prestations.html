@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Pluralité de prestations (art. 19 LTVA)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — TVA · justifie toujours par un article (barème HES-SO).</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "Pluralité de prestations (art. 19)",
+  subtitle: "Combinaisons, règle des 70 %, prestation accessoire",
+  questions: [
+    { type:"choice",
+      q:"Principe de base de l'art. 19 al. 1 LTVA : des prestations indépendantes sont…",
+      options:[
+        {t:"Traitées séparément, chacune selon son propre régime", ok:true},
+        {t:"Toujours regroupées sous le taux le plus élevé", ok:false},
+        {t:"Toujours regroupées sous le taux le plus bas", ok:false}],
+      explain:"Par principe, chaque prestation indépendante suit son propre sort fiscal (taux, lieu, exonération). Les al. 2 à 4 prévoient des exceptions." },
+
+    { type:"choice",
+      q:"Règle dite « des 70 % » (art. 19 al. 2). Plusieurs prestations réunies en une combinaison pour un prix global peuvent être traitées comme un tout si…",
+      options:[
+        {t:"Une prestation représente au moins 70 % de la contre-prestation totale : tout suit cette prestation prépondérante", ok:true},
+        {t:"Toutes les prestations ont le même taux", ok:false},
+        {t:"Le client le demande", ok:false}],
+      explain:"Si la prestation prépondérante atteint ≥ 70 % de la contre-prestation totale, l'ensemble de la combinaison peut être imposé au régime (taux/lieu) de cette prestation prépondérante (art. 19 al. 2)." },
+
+    { type:"choice",
+      q:"Un coffret cadeau : une bouteille de vin (taux 8,1 %) et un livre (taux 2,6 %) vendus ensemble. Le vin représente 80 % du prix. Comment imposer le tout selon l'art. 19 al. 2 ?",
+      options:[
+        {t:"Tout au taux normal 8,1 % (prestation prépondérante ≥ 70 %)", ok:true},
+        {t:"Tout au taux réduit 2,6 %", ok:false},
+        {t:"Moitié-moitié", ok:false}],
+      explain:"Le vin (prépondérant, 80 % ≥ 70 %) impose son taux à l'ensemble : 8,1 % sur tout le coffret. Sinon, il faudrait ventiler." },
+
+    { type:"choice",
+      q:"Une prestation ACCESSOIRE (art. 19 al. 3), par ex. l'emballage d'un produit :",
+      options:[
+        {t:"Suit le sort fiscal de la prestation principale", ok:true},
+        {t:"Est toujours exonérée", ok:false},
+        {t:"Doit toujours être facturée séparément", ok:false}],
+      explain:"Les prestations accessoires (et celles qui en découlent) partagent le traitement de la prestation principale (art. 19 al. 3)." },
+
+    { type:"open",
+      q:"Question de cours : un restaurant facture un menu avec un plat (à 8,1 %) et un repas à l'emporter normalement à 2,6 %. Expliquez quand le taux réduit « à l'emporter » s'applique.",
+      answer:"La restauration sur place est imposée au taux normal (8,1 %) car elle s'accompagne de prestations de services (service, infrastructure, places assises). La vente de denrées alimentaires à l'emporter ou en livraison bénéficie du taux réduit (2,6 %) à condition de mesures organisationnelles appropriées séparant clairement le chiffre d'affaires « à l'emporter » du chiffre d'affaires « sur place ». Sans cette séparation, tout est imposé au taux normal.",
+      explain:"Sur place = service = 8,1 %. À l'emporter = denrée alimentaire = 2,6 %, si la séparation des chiffres d'affaires est documentée." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

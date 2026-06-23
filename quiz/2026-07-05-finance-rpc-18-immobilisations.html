@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Immobilisations corporelles (RPC 18)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — Finance · normes Swiss GAAP RPC.</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "Immobilisations corporelles (RPC 18)",
+  subtitle: "Évaluation & amortissement",
+  questions: [
+    { type:"choice",
+      q:"Selon la RPC 18, à quelle valeur les immobilisations corporelles sont-elles inscrites au bilan ?",
+      options:[
+        {t:"Au coût d'acquisition ou de production, diminué des amortissements cumulés (et des dépréciations éventuelles)", ok:true},
+        {t:"À la valeur de marché réévaluée chaque année", ok:false},
+        {t:"Au prix de revente estimé", ok:false}],
+      explain:"RPC 18 : coût d'acquisition/production − amortissements cumulés − dépréciations (RPC 20). La réévaluation au-dessus du coût n'est pas le principe (contrairement à certaines options IFRS)." },
+
+    { type:"choice",
+      q:"Sur quelle base l'amortissement est-il calculé selon la RPC 18 ?",
+      options:[
+        {t:"Sur la durée d'utilité estimée du bien, de manière systématique", ok:true},
+        {t:"Sur la durée maximale fiscalement admise, toujours", ok:false},
+        {t:"Librement, sans plan", ok:false}],
+      explain:"L'amortissement est planifié sur la durée d'utilité économique du bien (systématique). Les taux fiscaux maximaux ne dictent pas l'amortissement RPC, qui vise l'image fidèle." },
+
+    { type:"num",
+      q:"Une machine est acquise pour 60'000, valeur résiduelle estimée 6'000, durée d'utilité 6 ans (amortissement linéaire). Quel est l'amortissement annuel ? (CHF)",
+      answer:9000,
+      explain:"Base amortissable = 60'000 − 6'000 = 54'000. Amortissement annuel = 54'000 ÷ 6 = 9'000." },
+
+    { type:"num",
+      q:"Après 2 ans d'utilisation, quelle est la valeur comptable nette de cette machine ? (CHF)",
+      answer:42000,
+      explain:"Amortissements cumulés = 2 × 9'000 = 18'000. Valeur comptable = 60'000 − 18'000 = 42'000." },
+
+    { type:"open",
+      q:"Question de cours : comment la RPC traite-t-elle une dépense ultérieure sur une immobilisation — par exemple une grande révision qui prolonge la durée d'utilité ?",
+      answer:"Une dépense ultérieure est activée (ajoutée à la valeur de l'immobilisation) si elle augmente la valeur d'utilité ou prolonge sensiblement la durée d'utilité du bien — c'est une plus-value, un investissement. À l'inverse, les dépenses qui ne font que maintenir l'état ou la capacité du bien (entretien courant, réparations) sont passées en charges de l'exercice. Le critère est donc : maintien (charge) vs amélioration/prolongation (activation).",
+      explain:"Entretien/maintien = charge ; amélioration ou prolongation de la durée d'utilité = activation au bilan." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

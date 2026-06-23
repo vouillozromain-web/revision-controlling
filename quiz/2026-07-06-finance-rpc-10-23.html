@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Incorporelles (RPC 10) & provisions (RPC 23)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — Finance · normes Swiss GAAP RPC.</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "Incorporelles (RPC 10) & provisions (RPC 23)",
+  subtitle: "Application des normes Swiss GAAP RPC",
+  questions: [
+    { type:"choice",
+      q:"Selon la RPC 10, un actif incorporel généré en interne (ex. un logiciel développé par l'entreprise) peut-il être activé ?",
+      options:[
+        {t:"Oui, s'il est identifiable, contrôlé, apporte un bénéfice futur mesurable et que ses coûts sont déterminables", ok:true},
+        {t:"Jamais, seuls les incorporels acquis peuvent être activés", ok:false},
+        {t:"Toujours, sans condition", ok:false}],
+      explain:"La RPC 10 autorise l'activation d'un incorporel créé en interne si les conditions sont remplies (identifiable, profitera à l'entreprise sur plusieurs années, coûts mesurables). À défaut, les dépenses sont passées en charges." },
+
+    { type:"choice",
+      q:"Comment amortit-on un actif incorporel selon la RPC 10 ?",
+      options:[
+        {t:"Sur sa durée d'utilité (en général max. 5 ans, jusqu'à 20 ans si justifié)", ok:true},
+        {t:"Il n'est jamais amorti", ok:false},
+        {t:"Sur 50 ans obligatoirement", ok:false}],
+      explain:"Amortissement systématique sur la durée d'utilité : en règle générale 5 ans au maximum, et jusqu'à 20 ans dans des cas justifiés. Test de dépréciation en complément (RPC 20)." },
+
+    { type:"choice",
+      q:"Selon la RPC 23, à quelles conditions constitue-t-on une provision ?",
+      options:[
+        {t:"Engagement probable, fondé sur un événement passé, dont le montant ou l'échéance est incertain et peut être estimé de façon fiable", ok:true},
+        {t:"Dès qu'un dirigeant le souhaite, pour lisser le résultat", ok:false},
+        {t:"Uniquement si l'engagement est certain et exactement chiffré", ok:false}],
+      explain:"Provision (RPC 23) = engagement probable issu d'un événement passé, à l'échéance/au montant incertain, estimable de façon fiable. Les provisions arbitraires (lissage) sont interdites — ce seraient des réserves latentes." },
+
+    { type:"num",
+      q:"Une entreprise est en litige ; ses juristes estiment à 70 % la probabilité de devoir payer 200'000 CHF. Quel montant de provision la RPC 23 conduit-elle à constituer ? (CHF)",
+      answer:200000,
+      explain:"L'engagement est probable (> 50 %) et estimable : on provisionne la meilleure estimation de la sortie de ressources, soit 200'000. (On ne pondère pas par la probabilité pour un cas unique : on retient le montant attendu de l'obligation.)" },
+
+    { type:"open",
+      q:"Question de cours : quelle différence entre une PROVISION (RPC 23) et un PASSIF DE RÉGULARISATION (passif transitoire) ?",
+      answer:"Une provision concerne un engagement dont le montant ET/OU l'échéance sont incertains (litige, garanties, démantèlement) : il faut une estimation. Un passif de régularisation (passif transitoire / compte de régularisation) concerne des charges de l'exercice dont le montant et l'échéance sont connus ou facilement déterminables, mais qui ne seront facturées/payées qu'ultérieurement (ex. intérêts courus, salaires dus). Le degré d'incertitude distingue les deux : incertain → provision ; quasi certain → régularisation.",
+      explain:"Provision = incertitude sur montant/échéance (estimation). Régularisation = charge certaine mais pas encore facturée/payée." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

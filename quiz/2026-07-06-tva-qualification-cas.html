@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Qualification d'opérations (cas pratique)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — TVA · justifie toujours par un article (barème HES-SO).</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "Qualification d'opérations (cas pratique)",
+  subtitle: "Livraison/service · lieu · traitement",
+  questions: [
+    { type:"choice",
+      q:"Une entreprise sise à Sion vend et livre des meubles à un client à Lyon (France). Comment qualifier et localiser l'opération ?",
+      options:[
+        {t:"Livraison ; lieu = Suisse (départ du bien, art. 7) ; mais exportation exonérée (art. 23) avec preuve d'exportation", ok:true},
+        {t:"Prestation de services localisée en France", ok:false},
+        {t:"Opération exclue du champ", ok:false}],
+      explain:"Vente de biens = livraison. Lieu = là où le transport commence, soit la Suisse (art. 7 al. 1 let. a). Comme le bien est exporté, l'opération est exonérée au sens propre (art. 23), avec droit à la déduction de l'IP, sous réserve de la preuve d'exportation." },
+
+    { type:"choice",
+      q:"Un consultant établi à Genève facture une analyse stratégique à une entreprise cliente à Munich (Allemagne). Traitement TVA ?",
+      options:[
+        {t:"Prestation de services ; lieu = chez le destinataire (Allemagne, art. 8 al. 1) ; hors champ TVA suisse", ok:true},
+        {t:"Livraison imposable en Suisse à 8,1 %", ok:false},
+        {t:"Exonérée mais localisée en Suisse", ok:false}],
+      explain:"Conseil = prestation de services. Principe du lieu du destinataire (art. 8 al. 1) : la prestation est localisée en Allemagne, donc non soumise à la TVA suisse (le client étranger gère l'impôt sur les acquisitions chez lui)." },
+
+    { type:"choice",
+      q:"Un garage à Brigue répare la voiture d'un client domicilié à Brigue. Qualification et traitement ?",
+      options:[
+        {t:"Livraison (travaux sur un bien, art. 3 let. d ch. 2) ; lieu = Suisse ; imposable à 8,1 %", ok:true},
+        {t:"Prestation de services exonérée", ok:false},
+        {t:"Opération exclue (art. 21)", ok:false}],
+      explain:"La réparation est une livraison (travail sur un bien existant). Le bien se trouve en Suisse → opération suisse, imposable au taux normal 8,1 %." },
+
+    { type:"choice",
+      q:"Un médecin indépendant facture une consultation de soins à un patient. Traitement ?",
+      options:[
+        {t:"Prestation de services exclue du champ (art. 21 al. 2 ch. 3) ; pas de TVA, pas de déduction de l'IP", ok:true},
+        {t:"Imposable au taux réduit 2,6 %", ok:false},
+        {t:"Exonérée avec droit à déduction", ok:false}],
+      explain:"Les soins médicaux dans le domaine de la santé sont EXCLUS (art. 21). Pas de TVA facturée, mais pas de droit à la déduction de l'impôt préalable (≠ exonération de l'art. 23)." },
+
+    { type:"open",
+      q:"Méthode : décrivez les trois étapes pour qualifier correctement une opération TVA dans un cas d'examen.",
+      answer:"1) Nature : déterminer s'il s'agit d'une livraison de biens (art. 3 let. d : vente, travaux sur un bien, location) ou d'une prestation de services (art. 3 let. e, par défaut). 2) Lieu : appliquer la règle de localisation correspondante — art. 7 pour les livraisons (lieu où le bien se trouve / d'où part le transport), art. 8 pour les services (en principe lieu du destinataire). 3) Traitement : si l'opération est localisée en Suisse, vérifier si elle est imposable (taux 8,1 / 3,8 / 2,6 %), exonérée (art. 23, ex. exportations — avec droit à déduction) ou exclue (art. 21 — sans droit à déduction). Toujours citer l'article.",
+      explain:"Nature (art. 3) → Lieu (art. 7/8) → Traitement (imposable / exonéré art. 23 / exclu art. 21). C'est la trame du composant n°1 de l'examen." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Mise en équivalence (PIM / MEE)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — Finance · normes Swiss GAAP RPC.</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "Mise en équivalence (PIM / MEE)",
+  subtitle: "Entreprises associées",
+  questions: [
+    { type:"choice",
+      q:"La méthode de la mise en équivalence (MEE / PIM) s'applique en principe à quelles participations ?",
+      options:[
+        {t:"Les entreprises associées (influence notable, généralement 20 à 50 %)", ok:true},
+        {t:"Les filiales contrôlées à plus de 50 %", ok:false},
+        {t:"Les simples placements financiers (< 20 %)", ok:false}],
+      explain:"Influence notable (≈ 20–50 %) → mise en équivalence. Contrôle (> 50 %) → intégration globale. Contrôle conjoint → intégration proportionnelle (ou MEE). Placement (< 20 %) → évaluation comme un actif financier." },
+
+    { type:"choice",
+      q:"Au bilan consolidé, comment la participation mise en équivalence est-elle présentée ?",
+      options:[
+        {t:"En une seule ligne, à la quote-part des capitaux propres de l'associée (réévaluée à chaque clôture)", ok:true},
+        {t:"Poste par poste (actifs et passifs additionnés)", ok:false},
+        {t:"À sa valeur d'acquisition figée", ok:false}],
+      explain:"La MEE est une consolidation « sur une ligne » : la valeur de la participation suit la quote-part des CP de l'associée, augmentée du résultat acquis et diminuée des dividendes reçus." },
+
+    { type:"num",
+      q:"M détient 30 % de A, acquis pour 350 alors que les CP de A valaient 1'000. Quel goodwill est inclus dans la valeur de mise en équivalence ? (CHF)",
+      answer:50,
+      explain:"Quote-part des CP acquise = 30 % × 1'000 = 300. Goodwill = prix payé − quote-part = 350 − 300 = 50 (inclus dans la ligne « participation MEE »)." },
+
+    { type:"num",
+      q:"L'année suivante, A réalise un bénéfice de 200 et ne verse pas de dividende. Quelle est la nouvelle valeur de mise en équivalence de la participation ? (CHF)",
+      answer:410,
+      explain:"Valeur MEE = valeur initiale + quote-part du résultat = 350 + (30 % × 200) = 350 + 60 = 410. La quote-part du bénéfice (60) figure aussi au compte de résultat consolidé." },
+
+    { type:"open",
+      q:"Question de cours : qu'arrive-t-il à la valeur de mise en équivalence lorsque l'entreprise associée verse un dividende à la mère ?",
+      answer:"Le dividende reçu réduit la valeur de mise en équivalence de la participation (il représente un retour de capitaux propres, déjà comptabilisés via la quote-part du résultat). Il n'est donc PAS enregistré comme un produit financier au compte de résultat consolidé — sans quoi le bénéfice serait compté deux fois. En MEE : valeur = coût d'acquisition + quote-parts de résultats − dividendes reçus.",
+      explain:"Dividende reçu = diminution de la participation MEE, pas un produit (évite le double comptage du résultat de l'associée)." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

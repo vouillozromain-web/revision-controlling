@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Bénéfice interne sur immobilisation</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — Finance · normes Swiss GAAP RPC.</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "Bénéfice interne sur immobilisation",
+  subtitle: "Élimination + correction des amortissements",
+  questions: [
+    { type:"choice",
+      q:"Une société du groupe vend une machine à une autre société du groupe en réalisant un bénéfice. Que faut-il éliminer en consolidation ?",
+      options:[
+        {t:"Le bénéfice interne contenu dans la valeur de la machine ET le sur-amortissement qui en découle", ok:true},
+        {t:"Uniquement le bénéfice interne, jamais les amortissements", ok:false},
+        {t:"Rien, la transaction est intra-groupe donc neutre", ok:false}],
+      explain:"Du point de vue du groupe, la machine ne doit figurer qu'à son coût d'origine. On élimine le bénéfice interne (l'immobilisation est surévaluée) puis on corrige l'amortissement calculé sur cette valeur trop élevée." },
+
+    { type:"num",
+      q:"M vend à F une machine pour 120 ; sa valeur comptable chez M était de 100. Quel est le bénéfice interne à éliminer ? (CHF)",
+      answer:20,
+      explain:"Bénéfice interne = prix de cession intra-groupe − valeur comptable chez le vendeur = 120 − 100 = 20." },
+
+    { type:"num",
+      q:"F amortit cette machine sur 5 ans (linéaire, 20 %/an) sur la base de 120. De combien l'amortissement de l'exercice est-il SURÉVALUÉ du point de vue du groupe ? (CHF)",
+      answer:4,
+      explain:"Amortissement comptabilisé par F = 20 % × 120 = 24. Amortissement « correct » pour le groupe = 20 % × 100 = 20. Sur-amortissement = 24 − 20 = 4 ; on le corrige (réduit la charge, augmente le résultat consolidé)." },
+
+    { type:"num",
+      q:"Quel est l'effet NET de ces retraitements sur le résultat consolidé de l'année de la vente ? (CHF, négatif = baisse)",
+      answer:-16,
+      explain:"Élimination du bénéfice interne : −20 sur le résultat. Correction du sur-amortissement : +4. Effet net = −20 + 4 = −16 sur le résultat consolidé." },
+
+    { type:"open",
+      q:"Question de cours : pourquoi corrige-t-on l'amortissement après avoir éliminé le bénéfice interne sur une immobilisation, alors qu'on ne le fait pas pour un bénéfice interne sur des stocks ?",
+      answer:"Parce qu'une immobilisation est amortie : l'acheteur du groupe calcule ses amortissements sur le prix d'achat intra-groupe, qui contient le bénéfice interne. Cet amortissement est donc trop élevé du point de vue du groupe et doit être réduit chaque année jusqu'à la fin de la durée d'utilité. Les stocks ne sont pas amortis : il suffit d'éliminer le bénéfice interne tant qu'ils sont encore en stock (ils disparaissent dès qu'ils sont revendus hors du groupe).",
+      explain:"Immo amortie → bénéfice interne « étalé » via les amortissements, d'où la correction annuelle. Stock non amorti → élimination ponctuelle." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

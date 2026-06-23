@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Méthode effective vs TDFN</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — TVA · justifie toujours par un article (barème HES-SO).</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "Méthode effective vs TDFN",
+  subtitle: "Taux de la dette fiscale nette (art. 37 LTVA)",
+  questions: [
+    { type:"choice",
+      q:"En quoi consiste la méthode des taux de la dette fiscale nette (TDFN) ?",
+      options:[
+        {t:"On applique un taux forfaitaire (par branche) au chiffre d'affaires TTC, sans décompter l'impôt préalable", ok:true},
+        {t:"On déduit l'impôt préalable réel poste par poste", ok:false},
+        {t:"On ne paie pas de TVA du tout", ok:false}],
+      explain:"Avec les TDFN, l'impôt dû = CA TTC × taux forfaitaire de la branche. L'impôt préalable est réputé compris dans ce taux : on ne le décompte donc pas séparément (art. 37 LTVA). Simplification administrative." },
+
+    { type:"choice",
+      q:"Quelles sont les deux limites à respecter (cumulativement) pour pouvoir adopter les TDFN ?",
+      options:[
+        {t:"CA annuel ≤ 5'024'000 CHF ET impôt dû ≤ 108'000 CHF par an", ok:true},
+        {t:"CA ≤ 100'000 CHF uniquement", ok:false},
+        {t:"Aucune limite, c'est libre", ok:false}],
+      explain:"TDFN réservés aux PME : chiffre d'affaires imposable ≤ 5'024'000 CHF ET dette fiscale ≤ 108'000 CHF par an (calculée au TDFN), art. 37 al. 1 LTVA." },
+
+    { type:"num",
+      q:"Une fiduciaire applique un TDFN de 6,2 %. Son chiffre d'affaires TTC du semestre est de 250'000 CHF. Quel est l'impôt dû à l'AFC ? (CHF)",
+      answer:15500,
+      explain:"Impôt dû = CA TTC × TDFN = 250'000 × 6,2 % = 15'500. Aucune déduction d'impôt préalable en plus (il est inclus dans le taux)." },
+
+    { type:"choice",
+      q:"À quelle fréquence décompte-t-on la TVA avec la méthode des TDFN ?",
+      options:[
+        {t:"Semestriellement (2 fois par an)", ok:true},
+        {t:"Trimestriellement (4 fois par an)", ok:false},
+        {t:"Mensuellement", ok:false}],
+      explain:"TDFN = décompte semestriel. La méthode effective se décompte en principe trimestriellement." },
+
+    { type:"open",
+      q:"Question de cours : citez un avantage et un inconvénient de la méthode TDFN par rapport à la méthode effective.",
+      answer:"Avantage : forte simplification administrative — pas besoin de calculer et justifier l'impôt préalable poste par poste, décompte semestriel, moins de risque d'erreur. Inconvénient : l'impôt préalable réel n'est pas récupéré ; en cas de gros investissements ou d'achats importants (impôt préalable élevé), la méthode effective serait plus avantageuse car elle permettrait de déduire davantage. Le choix des TDFN engage en principe pour au moins une période (1 an), le passage à la méthode effective pour 3 ans.",
+      explain:"TDFN = simple mais l'IP réel est perdu ; effective = plus lourde mais récupère l'IP, intéressante si gros investissements." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

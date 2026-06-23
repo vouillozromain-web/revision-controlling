@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — La facture (art. 26 LTVA)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — TVA · justifie toujours par un article (barème HES-SO).</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "La facture (art. 26 LTVA)",
+  subtitle: "Mentions obligatoires & droit à la déduction",
+  questions: [
+    { type:"choice",
+      q:"Parmi ces mentions, laquelle n'est PAS exigée par l'art. 26 al. 2 LTVA sur une facture ?",
+      options:[
+        {t:"Le bénéfice net réalisé par le fournisseur sur la prestation", ok:true},
+        {t:"Le numéro IDE du fournisseur (avec suffixe TVA)", ok:false},
+        {t:"La date ou la période de la prestation", ok:false}],
+      explain:"L'art. 26 al. 2 exige : nom et lieu du fournisseur + n° IDE, nom et lieu du destinataire, date/période, genre-objet-volume de la prestation, la contre-prestation, le taux et le montant de l'impôt. Jamais le bénéfice du fournisseur." },
+
+    { type:"choice",
+      q:"Le numéro d'identification de l'entreprise (IDE) à faire figurer sur la facture se présente sous quelle forme ?",
+      options:[
+        {t:"CHE-123.456.789 TVA", ok:true},
+        {t:"Un simple numéro de compte bancaire", ok:false},
+        {t:"Le numéro AVS du gérant", ok:false}],
+      explain:"Le n° IDE prend la forme CHE-xxx.xxx.xxx complété du suffixe « TVA » lorsque l'entreprise est assujettie (art. 26 al. 2 let. a)." },
+
+    { type:"num",
+      q:"Une facture indique « Montant TVA comprise : 1'081 CHF, TVA 8,1 % incluse ». Quel est le montant de TVA contenu dans ce total ? (CHF, arrondi au centime)",
+      answer:81,
+      explain:"Montant TTC 1'081 ÷ 1,081 = 1'000 HT, donc TVA = 1'081 − 1'000 = 81. (Quand le taux est mentionné, l'indication TTC suffit, art. 26 al. 3.)" },
+
+    { type:"choice",
+      q:"Pour les tickets de caisse de faible montant, jusqu'à quelle somme une facture simplifiée (sans le nom du destinataire) est-elle admise ?",
+      options:[
+        {t:"Jusqu'à 400 CHF", ok:true},
+        {t:"Jusqu'à 100 CHF", ok:false},
+        {t:"Aucune simplification n'est admise", ok:false}],
+      explain:"Jusqu'à 400 CHF TTC, le nom et l'adresse du destinataire ne sont pas obligatoires (art. 26 al. 3 LTVA)." },
+
+    { type:"open",
+      q:"Question de cours : depuis 2010, l'absence d'une mention sur la facture empêche-t-elle automatiquement la déduction de l'impôt préalable ? Justifiez.",
+      answer:"Non. Depuis la révision de 2010, la déduction de l'impôt préalable n'est plus liée à la perfection formelle de la facture (principe du formalisme atténué, art. 28 al. 4 et art. 81 LTVA). L'assujetti peut prouver par tout moyen qu'il a supporté l'impôt et que les conditions matérielles sont remplies. La facture conforme à l'art. 26 reste néanmoins le moyen de preuve standard.",
+      explain:"Formalisme atténué : la preuve prime sur la forme. Une facture incomplète n'interdit plus à elle seule la déduction." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

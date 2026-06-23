@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Du BC1 au BC2</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — Finance · normes Swiss GAAP RPC.</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "Du BC1 au BC2",
+  subtitle: "Bilans de consolidation successifs",
+  questions: [
+    { type:"choice",
+      q:"Que représente le BC1 (premier bilan de consolidation) ?",
+      options:[
+        {t:"Le cumul des bilans mère + filiales, après élimination de la participation contre les capitaux propres à l'acquisition", ok:true},
+        {t:"Le bilan individuel de la mère uniquement", ok:false},
+        {t:"Le bilan de la filiale réévalué à la juste valeur", ok:false}],
+      explain:"BC1 = addition poste à poste des bilans des sociétés du périmètre, puis élimination de la participation contre la quote-part des CP de la filiale à la date d'acquisition (fait apparaître goodwill et intérêts minoritaires)." },
+
+    { type:"choice",
+      q:"Quel est l'apport du BC2 par rapport au BC1 ?",
+      options:[
+        {t:"Il prend en compte la variation des capitaux propres de la filiale depuis l'acquisition (réserves issues du résultat, etc.)", ok:true},
+        {t:"Il supprime le goodwill", ok:false},
+        {t:"Il ajoute les sociétés hors périmètre", ok:false}],
+      explain:"Le BC2 répartit les variations de CP de la filiale survenues depuis l'acquisition entre la part du groupe (réserves consolidées) et les intérêts minoritaires." },
+
+    { type:"num",
+      q:"M détient 80 % de F. CP de F à l'acquisition = 700. À la clôture, les CP de F valent 900 (la filiale a généré 200 de réserves depuis). Quelle part de cette variation revient au GROUPE ? (CHF)",
+      answer:160,
+      explain:"Variation des CP depuis l'acquisition = 900 − 700 = 200. Part du groupe = 80 % × 200 = 160 (ajoutée aux réserves consolidées)." },
+
+    { type:"num",
+      q:"Même cas (80 % / variation 200). Quelle part de la variation revient aux intérêts minoritaires ? (CHF)",
+      answer:40,
+      explain:"Part des minoritaires = 20 % × 200 = 40 (ajoutée aux intérêts minoritaires au passif consolidé)." },
+
+    { type:"open",
+      q:"Question de cours : pourquoi ne consolide-t-on (en intégration globale) que les réserves de la filiale POSTÉRIEURES à l'acquisition dans les réserves du groupe ?",
+      answer:"Parce que les réserves existant à la date d'acquisition ont déjà été « payées » par la mère dans le prix de la participation : elles sont éliminées contre la participation lors du BC1 (et servent au calcul du goodwill). Seules les variations de capitaux propres générées APRÈS l'entrée dans le périmètre reflètent l'enrichissement réalisé sous le contrôle du groupe ; c'est donc cette part qui alimente les réserves consolidées (pour la quote-part du groupe) et les intérêts minoritaires (pour le reste).",
+      explain:"Réserves à l'acquisition = déjà payées (éliminées au BC1). Réserves postérieures = enrichissement du groupe → réserves consolidées + minoritaires." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>
