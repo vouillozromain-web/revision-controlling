@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Élimination des bénéfices internes (stocks)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — Finance · consolidation Swiss GAAP RPC.</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "Élimination des bénéfices internes (stocks)",
+  subtitle: "Marges internes du groupe",
+  questions: [
+    { type:"num",
+      q:"H livre des marchandises à sa filiale F avec une marge brute de 20 %. Au 31.12, il reste dans le stock de F des marchandises provenant de H pour 50. Quel bénéfice interne faut-il éliminer du stock ? (CHF)",
+      answer:10,
+      explain:"Bénéfice interne = stock intragroupe à la clôture × taux de marge = 50 × 20 % = 10. On réduit le stock de 10 et le résultat de 10." },
+
+    { type:"num",
+      q:"Même groupe, marge 20 %. Le stock intragroupe à la clôture s'élève cette fois à 120. Bénéfice interne à éliminer ? (CHF)",
+      answer:24,
+      explain:"120 × 20 % = 24. La marge brute s'entend en % du prix de vente." },
+
+    { type:"choice",
+      q:"Pourquoi élimine-t-on ce bénéfice interne dans les comptes consolidés ?",
+      options:[
+        {t:"Parce qu'il n'est pas réalisé tant que la marchandise reste dans le groupe", ok:true},
+        {t:"Parce que le groupe ne paie pas d'impôt dessus", ok:false},
+        {t:"Parce que la filiale est minoritaire", ok:false}],
+      explain:"Du point de vue du groupe, aucune vente n'a eu lieu vers l'extérieur : le bénéfice n'est pas encore réalisé, il faut donc le neutraliser." },
+
+    { type:"choice",
+      q:"La filiale (détenue à 70 %) vend à la mère avec marge (vente 'upstream'). Comment répartir l'élimination du bénéfice interne ?",
+      options:[
+        {t:"Entre le groupe et les intérêts minoritaires (selon les %)", ok:true},
+        {t:"100 % au groupe (mère)", ok:false},
+        {t:"100 % aux minoritaires", ok:false}],
+      explain:"Vente upstream : le bénéfice est chez la filiale → réparti entre groupe et minoritaires. Vente downstream (mère → filiale) : le bénéfice est chez la mère → 100 % au groupe." },
+
+    { type:"open",
+      q:"Question de cours : comment calcule-t-on le bénéfice interne à éliminer sur les stocks ?",
+      answer:"Bénéfice interne = taux de marge brute (en % du prix de vente) × montant du stock intragroupe encore présent à la date de clôture. On élimine ce montant du stock (bilan) et du résultat (compte de résultat).",
+      explain:"Bien repérer le stock qui PROVIENT du groupe et la marge appliquée." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Option (art. 22)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — TVA · justifie toujours par un article (barème HES-SO).</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "L'option (art. 22)",
+  subtitle: "Imposition volontaire des prestations exclues",
+  questions: [
+    { type:"choice",
+      q:"Qu'est-ce que l'option au sens de l'art. 22 LTVA ?",
+      options:[
+        {t:"Soumettre volontairement à la TVA une prestation exclue, ce qui ouvre le droit à la déduction de l'IP", ok:true},
+        {t:"Renoncer volontairement à l'assujettissement", ok:false},
+        {t:"Choisir le taux de TVA applicable", ok:false}],
+      explain:"L'option permet d'imposer volontairement une prestation normalement exclue (art. 21), ce qui rend la déduction de l'impôt préalable possible (art. 22 LTVA)." },
+
+    { type:"choice",
+      q:"Pour laquelle de ces opérations l'option est-elle possible ?",
+      options:[
+        {t:"Location de locaux à usage commercial", ok:true},
+        {t:"Prime d'assurance", ok:false},
+        {t:"Location d'un appartement à usage d'habitation", ok:false}],
+      explain:"On peut opter pour la location de locaux commerciaux. L'option est en revanche interdite pour les assurances et pour les immeubles à usage d'habitation." },
+
+    { type:"choice",
+      q:"Vrai ou faux : il est possible d'opter pour tous les chiffres d'affaires exclus.",
+      options:[
+        {t:"Faux", ok:true},
+        {t:"Vrai", ok:false}],
+      explain:"Faux. L'option est exclue notamment pour les assurances (21/2/18), le marché monétaire et des capitaux (19), les jeux d'argent (23) et les immeubles à usage d'habitation (20/21)." },
+
+    { type:"choice",
+      q:"Quelle est l'incidence fiscale de l'option ?",
+      options:[
+        {t:"Elle ouvre le droit à la déduction de l'impôt préalable (à 100 % sur les CA exclus avec option)", ok:true},
+        {t:"Elle supprime tout droit à la déduction", ok:false},
+        {t:"Elle réduit le taux applicable de moitié", ok:false}],
+      explain:"En optant, l'assujetti soumet la prestation à la TVA et récupère l'impôt préalable correspondant (art. 22 LTVA)." },
+
+    { type:"open",
+      q:"Question de cours : pour quelles opérations l'option n'est-elle JAMAIS possible ?",
+      answer:"Les prestations d'assurance et de réassurance (art. 21 al. 2 ch. 18) ; les opérations du marché monétaire et des capitaux (ch. 19) ; les paris, loteries et jeux de hasard (ch. 23) ; la vente et la mise à disposition d'immeubles à usage d'habitation (ch. 20 et 21). Également impossible en cas de décompte selon les TDFN ou les TAF.",
+      explain:"Liste classique des opérations sans option possible (art. 22 LTVA)." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

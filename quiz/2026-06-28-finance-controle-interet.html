@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — % de contrôle et % d'intérêt</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — Finance · consolidation Swiss GAAP RPC.</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "% de contrôle et % d'intérêt",
+  subtitle: "Chaînes de participation",
+  questions: [
+    { type:"num",
+      q:"H détient 95 % de A ; A détient 40 % de L. Quel est le % d'INTÉRÊT de H dans L ? (en %, une décimale)",
+      answer:38,
+      explain:"% d'intérêt = produit des taux le long de la chaîne : 95 % × 40 % = 38,0 %." },
+
+    { type:"num",
+      q:"H détient 80 % de C (qui détient 50 % de T) et 30 % de D (qui détient 10 % de T). Quel est le % d'INTÉRÊT total de H dans T ? (en %, une décimale)",
+      answer:43,
+      explain:"On additionne les deux chemins : (80 % × 50 %) + (30 % × 10 %) = 40 % + 3 % = 43,0 %." },
+
+    { type:"num",
+      q:"Même situation : H contrôle C (80 %), mais ne contrôle pas D (30 %). Quel est le % de CONTRÔLE de H sur T ? (en %)",
+      answer:50,
+      explain:"Seule la chaîne contrôlée transmet le contrôle : via C (contrôlée), on retient ses 50 % de T. D n'étant pas contrôlée (30 % ≤ 50 %), ses 10 % ne comptent pas → contrôle = 50 %." },
+
+    { type:"choice",
+      q:"Comment se détermine le % de contrôle dans une chaîne de participations ?",
+      options:[
+        {t:"On suit la chaîne des droits de vote ; un maillon non contrôlé (≤ 50 %) ne transmet aucun contrôle", ok:true},
+        {t:"On multiplie tous les taux de participation", ok:false},
+        {t:"On prend toujours le taux le plus élevé", ok:false}],
+      explain:"Le contrôle se 'propage' tant que chaque maillon est contrôlé ; on retient alors le taux du dernier maillon. La multiplication des taux donne le % d'intérêt, pas le % de contrôle." },
+
+    { type:"open",
+      q:"Question de cours : quelle est la différence entre le % de contrôle et le % d'intérêt ?",
+      answer:"Le % de contrôle mesure le pouvoir de vote : on suit la chaîne et, tant que chaque maillon est contrôlé (> 50 %), on retient le taux du dernier maillon ; un maillon non contrôlé ne transmet rien. Le % d'intérêt mesure la part économique réelle : on multiplie les taux de participation le long de la chaîne (et on additionne s'il y a plusieurs chemins).",
+      explain:"Contrôle = pouvoir (vote) ; intérêt = part économique (multiplication)." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

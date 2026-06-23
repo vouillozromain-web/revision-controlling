@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Impôt sur les acquisitions</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — TVA · justifie toujours par un article (barème HES-SO).</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "Impôt sur les acquisitions",
+  subtitle: "Art. 45-49 LTVA",
+  questions: [
+    { type:"choice",
+      q:"Qu'est-ce que l'impôt sur les acquisitions ?",
+      options:[
+        {t:"L'impôt dû par le destinataire suisse sur une prestation acquise auprès d'une entreprise étrangère non inscrite", ok:true},
+        {t:"L'impôt sur l'achat d'immeubles en Suisse", ok:false},
+        {t:"Un impôt sur les acquisitions de titres", ok:false}],
+      explain:"L'impôt sur les acquisitions met l'impôt à la charge du destinataire suisse (auto-taxation) pour des prestations fournies par des entreprises étrangères non inscrites au registre TVA (art. 45 LTVA)." },
+
+    { type:"choice",
+      q:"Un cabinet de conseil juridique à Paris (non inscrit en Suisse) facture des honoraires à une société suisse inscrite à la TVA. Traitement ?",
+      options:[
+        {t:"Impôt sur les acquisitions chez le destinataire (lieu en CH, art. 8 al. 1)", ok:true},
+        {t:"Aucune TVA, prestation étrangère", ok:false},
+        {t:"Exonéré à 0 %", ok:false}],
+      explain:"Le conseil suit le principe du destinataire (art. 8 al. 1) : lieu en Suisse. Fourni par un prestataire étranger non inscrit → le destinataire déclare l'impôt sur les acquisitions (art. 45 LTVA)." },
+
+    { type:"choice",
+      q:"Un particulier (non inscrit au registre TVA) acquiert pour 12'000 par an de prestations de conseil auprès d'une société étrangère. Est-il redevable de l'impôt sur les acquisitions ?",
+      options:[
+        {t:"Oui, car ses acquisitions dépassent 10'000 par année civile", ok:true},
+        {t:"Non, un particulier n'est jamais concerné", ok:false},
+        {t:"Non, seulement au-dessus de 100'000", ok:false}],
+      explain:"Un destinataire NON inscrit devient redevable de l'impôt sur les acquisitions si ses acquisitions dépassent 10'000 par année civile (art. 45 al. 2 LTVA)." },
+
+    { type:"num",
+      q:"À partir de quel montant d'acquisitions par année civile un destinataire NON inscrit devient-il redevable de l'impôt sur les acquisitions ? (CHF)",
+      answer:10000,
+      explain:"Seuil de CHF 10'000 par année civile pour les destinataires non inscrits (art. 45 al. 2 LTVA). Les destinataires déjà inscrits sont toujours concernés." },
+
+    { type:"open",
+      q:"Question de cours : à quoi sert l'impôt sur les acquisitions ?",
+      answer:"Il comble la lacune d'imposition sur les prestations acquises auprès d'entreprises étrangères non inscrites au registre TVA, et évite une distorsion de la concurrence entre les prestataires étrangers et les prestataires établis en Suisse.",
+      explain:"Double objectif : combler la lacune et éviter la distorsion de concurrence (art. 45 LTVA)." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

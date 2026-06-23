@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Leasing (RPC 13) & dépréciation (RPC 20)</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — Finance · normes Swiss GAAP RPC.</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "Leasing (RPC 13) & dépréciation (RPC 20)",
+  subtitle: "Application des normes Swiss GAAP RPC",
+  questions: [
+    { type:"choice",
+      q:"Selon la RPC 13, quel type de leasing est porté à l'actif du bilan ?",
+      options:[
+        {t:"Le leasing financier (immobilisation + engagement de leasing)", ok:true},
+        {t:"Le leasing d'exploitation", ok:false},
+        {t:"Aucun des deux", ok:false}],
+      explain:"Leasing financier : assimilé à un achat → immobilisation à l'actif et engagement au passif. Leasing d'exploitation : assimilé à une location → simples charges, rien au bilan." },
+
+    { type:"choice",
+      q:"Un contrat de leasing remplit un seul des critères du leasing financier. Comment le traiter ?",
+      options:[
+        {t:"Comme un leasing financier (achat d'immobilisation)", ok:true},
+        {t:"Comme un leasing d'exploitation", ok:false},
+        {t:"Au choix de l'entreprise", ok:false}],
+      explain:"Un seul critère rempli suffit pour qualifier un leasing financier (RPC 13)." },
+
+    { type:"num",
+      q:"Dépréciation (RPC 20). Un actif a une valeur comptable de 1'900, une valeur de marché nette de 1'300 et une valeur d'utilité de 1'500. Quel est le montant de la dépréciation à enregistrer ? (CHF)",
+      answer:400,
+      explain:"Valeur réalisable = max(valeur de marché nette ; valeur d'utilité) = max(1'300 ; 1'500) = 1'500. Dépréciation = valeur comptable − valeur réalisable = 1'900 − 1'500 = 400." },
+
+    { type:"choice",
+      q:"Comment définit-on la valeur réalisable d'un actif (RPC 20) ?",
+      options:[
+        {t:"Le MAXIMUM entre la valeur de marché nette et la valeur d'utilité", ok:true},
+        {t:"Le minimum entre les deux", ok:false},
+        {t:"La moyenne des deux", ok:false}],
+      explain:"Valeur réalisable = max(valeur de marché nette ; valeur d'utilité)." },
+
+    { type:"open",
+      q:"Question de cours : quand faut-il enregistrer une dépréciation d'actif (impairment, RPC 20) ?",
+      answer:"Lorsque la valeur comptable d'un actif est supérieure à sa valeur réalisable. La différence (valeur comptable − valeur réalisable) correspond à la dépréciation à enregistrer. La valeur réalisable est le maximum entre la valeur de marché nette et la valeur d'utilité.",
+      explain:"Test à effectuer à chaque clôture (RPC 2 et RPC 20)." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz — Changement d'affectation & PASM</title>
+<link rel="stylesheet" href="../assets/quiz.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← Tous les quiz</a>
+  <div id="app"></div>
+  <p class="foot">Révision Controlling 3ème — TVA · justifie toujours par un article (barème HES-SO).</p>
+</div>
+<script>
+window.QUIZ = {
+  title: "Changement d'affectation & PASM",
+  subtitle: "Art. 31-32 LTVA",
+  questions: [
+    { type:"choice",
+      q:"Quand y a-t-il prestation à soi-même (PASM, art. 31) entraînant une correction de l'impôt préalable ?",
+      options:[
+        {t:"Quand un bien passe d'une activité donnant droit à la déduction à une activité n'y donnant pas (usage privé, activité exclue)", ok:true},
+        {t:"À chaque vente de marchandise", ok:false},
+        {t:"Uniquement lors d'une exportation", ok:false}],
+      explain:"La PASM corrige l'impôt préalable lorsqu'un bien quitte la sphère donnant droit à déduction (usage privé, affectation à une activité exclue…). Correction uniquement si l'IP avait été déduit (art. 31 LTVA)." },
+
+    { type:"num",
+      q:"Un bijoutier (raison individuelle) prélève à titre privé une bague fabriquée dans son entreprise. Prix d'achat des éléments : 1'200. Quelle est la base de calcul de la PASM (avec le forfait infrastructure) ? (CHF)",
+      answer:1596,
+      explain:"Biens fabriqués : prix d'achat des éléments + 33 % (forfait pour l'utilisation de l'infrastructure, art. 69 al. 3 OTVA) = 1'200 + 396 = 1'596. La TVA due = 8,1 % de 1'596." },
+
+    { type:"num",
+      q:"Pour un bien MOBILIER acquis et utilisé, de quel pourcentage par année écoulée amortit-on la valeur lors d'une PASM ? (en %)",
+      answer:20,
+      explain:"Amortissement linéaire d'un cinquième par an, soit 20 %/an pour les biens mobiliers et les prestations de services (5 %/an, soit 1/20, pour les immeubles)." },
+
+    { type:"choice",
+      q:"Pour un IMMEUBLE acquis et utilisé, quel est l'amortissement annuel retenu pour la valeur résiduelle (PASM) ?",
+      options:[
+        {t:"5 % par an (un vingtième)", ok:true},
+        {t:"20 % par an", ok:false},
+        {t:"10 % par an", ok:false}],
+      explain:"Pour les immeubles : amortissement linéaire d'un vingtième par année écoulée, soit 5 %/an (art. 31 LTVA)." },
+
+    { type:"open",
+      q:"Question de cours : quelle est la différence entre la PASM (art. 31) et le dégrèvement ultérieur de l'IP (DUIP, art. 32) ?",
+      answer:"PASM (art. 31) : correction (réduction) de l'impôt préalable quand un bien passe vers une activité ne donnant pas droit à la déduction (usage privé, activité exclue). DUIP (art. 32) : dégrèvement ultérieur, c'est-à-dire récupération de l'impôt préalable quand un bien passe au contraire vers une activité donnant droit à la déduction. Les bases de calcul sont les mêmes (amortissement 20 % mobilier / 5 % immeuble).",
+      explain:"PASM = on rend de l'IP ; DUIP = on récupère de l'IP. Sens opposés, mêmes bases de calcul." }
+  ]
+};
+</script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>
