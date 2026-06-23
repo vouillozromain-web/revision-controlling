@@ -20,7 +20,7 @@ window.QUIZ = {
     { type:"choice",
       q:"Pourquoi la distinction livraison de biens / prestation de services est-elle décisive en TVA ?",
       options:[
-        {t:"Parce qu'elle détermine le lieu de l'opération : art. 7 pour les livraisons, art. 8 pour les services", ok:true},
+        {t:"Parce qu'elle détermine le lieu de l'opération (la règle de localisation diffère pour les biens et pour les services)", ok:true},
         {t:"Parce que le taux est toujours différent", ok:false},
         {t:"Parce qu'une seule des deux est imposable", ok:false}],
       explain:"La qualification livraison/service fixe la règle de localisation applicable (art. 7 vs art. 8), donc le rattachement à la Suisse ou à l'étranger." },
@@ -28,7 +28,7 @@ window.QUIZ = {
     { type:"choice",
       q:"La réparation d'une machine (travail sur un bien existant du client) est, au sens de la LTVA :",
       options:[
-        {t:"Une livraison (art. 3 let. d ch. 2)", ok:true},
+        {t:"Une livraison", ok:true},
         {t:"Une prestation de services", ok:false},
         {t:"Une opération exclue", ok:false}],
       explain:"Les travaux sur un bien (réparation, montage, entretien, nettoyage) sont assimilés à des LIVRAISONS, même sans transfert de propriété (art. 3 let. d ch. 2)." },
@@ -36,7 +36,7 @@ window.QUIZ = {
     { type:"choice",
       q:"La location (ou le leasing) d'un bien mobilier est qualifiée de :",
       options:[
-        {t:"Livraison (mise à disposition d'un bien, art. 3 let. d ch. 3)", ok:true},
+        {t:"Livraison (mise à disposition d'un bien)", ok:true},
         {t:"Prestation de services", ok:false},
         {t:"Opération hors champ", ok:false}],
       explain:"La mise à disposition d'un bien à des fins d'usage ou de jouissance (location, leasing) est une livraison au sens de l'art. 3 let. d ch. 3." },
@@ -44,7 +44,7 @@ window.QUIZ = {
     { type:"choice",
       q:"Un conseil juridique fourni par un avocat est :",
       options:[
-        {t:"Une prestation de services (art. 3 let. e — tout ce qui n'est pas une livraison)", ok:true},
+        {t:"Une prestation de services (tout ce qui n'est pas une livraison)", ok:true},
         {t:"Une livraison", ok:false},
         {t:"Une opération exclue", ok:false}],
       explain:"La prestation de services est définie par défaut : toute prestation qui n'est pas une livraison (art. 3 let. e). Le conseil en fait partie." },

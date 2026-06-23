@@ -80,6 +80,7 @@
     } else {
       var opts = document.createElement("div");
       opts.className = "opts";
+      shuffle(item.options);
       item.options.forEach(function(opt){
         var b = document.createElement("button");
         b.className = "opt"; b.textContent = opt.t;
@@ -112,6 +113,7 @@
     d.scrollIntoView({behavior:"smooth", block:"center"});
   }
 
+  function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
   function esc(s){ return String(s).replace(/[&<>]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;"}[c]; }); }
   function fmt(n){ try{ return n.toLocaleString("fr-CH"); }catch(e){ return ""+n; } }
 })();

@@ -20,7 +20,7 @@ window.QUIZ = {
     { type:"choice",
       q:"Une entreprise sise à Sion vend et livre des meubles à un client à Lyon (France). Comment qualifier et localiser l'opération ?",
       options:[
-        {t:"Livraison ; lieu = Suisse (départ du bien, art. 7) ; mais exportation exonérée (art. 23) avec preuve d'exportation", ok:true},
+        {t:"Livraison ; lieu = Suisse (départ du bien) ; mais exportation exonérée, avec preuve d'exportation", ok:true},
         {t:"Prestation de services localisée en France", ok:false},
         {t:"Opération exclue du champ", ok:false}],
       explain:"Vente de biens = livraison. Lieu = là où le transport commence, soit la Suisse (art. 7 al. 1 let. a). Comme le bien est exporté, l'opération est exonérée au sens propre (art. 23), avec droit à la déduction de l'IP, sous réserve de la preuve d'exportation." },
@@ -28,7 +28,7 @@ window.QUIZ = {
     { type:"choice",
       q:"Un consultant établi à Genève facture une analyse stratégique à une entreprise cliente à Munich (Allemagne). Traitement TVA ?",
       options:[
-        {t:"Prestation de services ; lieu = chez le destinataire (Allemagne, art. 8 al. 1) ; hors champ TVA suisse", ok:true},
+        {t:"Prestation de services ; lieu = chez le destinataire (Allemagne) ; hors champ TVA suisse", ok:true},
         {t:"Livraison imposable en Suisse à 8,1 %", ok:false},
         {t:"Exonérée mais localisée en Suisse", ok:false}],
       explain:"Conseil = prestation de services. Principe du lieu du destinataire (art. 8 al. 1) : la prestation est localisée en Allemagne, donc non soumise à la TVA suisse (le client étranger gère l'impôt sur les acquisitions chez lui)." },
@@ -36,15 +36,15 @@ window.QUIZ = {
     { type:"choice",
       q:"Un garage à Brigue répare la voiture d'un client domicilié à Brigue. Qualification et traitement ?",
       options:[
-        {t:"Livraison (travaux sur un bien, art. 3 let. d ch. 2) ; lieu = Suisse ; imposable à 8,1 %", ok:true},
+        {t:"Livraison (travaux sur un bien) ; lieu = Suisse ; imposable à 8,1 %", ok:true},
         {t:"Prestation de services exonérée", ok:false},
-        {t:"Opération exclue (art. 21)", ok:false}],
+        {t:"Opération exclue du champ de l'impôt", ok:false}],
       explain:"La réparation est une livraison (travail sur un bien existant). Le bien se trouve en Suisse → opération suisse, imposable au taux normal 8,1 %." },
 
     { type:"choice",
       q:"Un médecin indépendant facture une consultation de soins à un patient. Traitement ?",
       options:[
-        {t:"Prestation de services exclue du champ (art. 21 al. 2 ch. 3) ; pas de TVA, pas de déduction de l'IP", ok:true},
+        {t:"Prestation de services exclue du champ ; pas de TVA, pas de déduction de l'IP", ok:true},
         {t:"Imposable au taux réduit 2,6 %", ok:false},
         {t:"Exonérée avec droit à déduction", ok:false}],
       explain:"Les soins médicaux dans le domaine de la santé sont EXCLUS (art. 21). Pas de TVA facturée, mais pas de droit à la déduction de l'impôt préalable (≠ exonération de l'art. 23)." },
