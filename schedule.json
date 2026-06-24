@@ -1,0 +1,66 @@
+{
+  "baseUrl": "https://vouillozromain-web.github.io/revision-controlling/",
+  "days": {
+    "2026-06-23": [
+      { "subject": "TVA", "title": "Lieu des prestations", "file": "quiz/2026-06-23-lieu-des-prestations.html", "rappel": "Livraisons : lieu où le bien se trouve / d'où part le transport (art. 7). Services : en principe lieu du destinataire (art. 8 al. 1)." }
+    ],
+    "2026-06-24": [
+      { "subject": "TVA", "title": "Assujettissement & CA déterminant", "file": "quiz/2026-06-24-tva-assujettissement.html", "rappel": "Seuil d'assujettissement obligatoire : 100'000 CHF de CA mondial (250'000 pour associations sportives/culturelles à but non lucratif gérées bénévolement)." },
+      { "subject": "Finance", "title": "Périmètre & méthodes de consolidation", "file": "quiz/2026-06-24-finance-perimetre.html", "rappel": "Contrôle (>50%) = intégration globale ; contrôle conjoint = intégration proportionnelle ; influence notable (20-50%) = mise en équivalence." }
+    ],
+    "2026-06-25": [
+      { "subject": "TVA", "title": "Soumis / exonéré / exclu", "file": "quiz/2026-06-25-tva-soumis-exonere-exclu.html", "rappel": "Exonéré (art. 23) = 0% AVEC droit à déduction (ex. exportations). Exclu (art. 21) = pas de TVA mais SANS droit à déduction (santé, formation, finance)." },
+      { "subject": "Finance", "title": "Goodwill & consolidation du capital", "file": "quiz/2026-06-25-finance-goodwill.html", "rappel": "Goodwill = prix payé − quote-part des capitaux propres acquis. Sous Swiss GAAP RPC : activé puis amorti (en général 5 ans, max 20)." }
+    ],
+    "2026-06-26": [
+      { "subject": "TVA", "title": "Impôt préalable & CORDIP", "file": "quiz/2026-06-26-tva-impot-prealable-cordip.html", "rappel": "L'IP est déductible pour l'activité entrepreneuriale imposable. Double affectation → correction (CORDIP) ; subventions → réduction (REDIP)." },
+      { "subject": "Finance", "title": "CO vs Swiss GAAP RPC", "file": "quiz/2026-06-26-finance-co-vs-rpc.html", "rappel": "CO autorise des réserves latentes (sous-évaluation) ; les RPC les interdisent et visent l'image fidèle (true and fair view)." }
+    ],
+    "2026-06-27": [
+      { "subject": "TVA", "title": "L'option (art. 22)", "file": "quiz/2026-06-27-tva-option.html", "rappel": "L'option permet d'imposer volontairement une prestation exclue (art. 21) pour récupérer l'impôt préalable. Impossible pour l'immobilier d'habitation." },
+      { "subject": "Finance", "title": "Élimination des bénéfices internes (stocks)", "file": "quiz/2026-06-27-finance-benefices-internes-stocks.html", "rappel": "Le bénéfice réalisé sur des marchandises encore en stock dans le groupe doit être éliminé (les stocks ne sont pas amortis : élimination ponctuelle)." }
+    ],
+    "2026-06-28": [
+      { "subject": "TVA", "title": "Impôt sur les acquisitions", "file": "quiz/2026-06-28-tva-impot-acquisitions.html", "rappel": "Prestation de services d'un fournisseur étranger non inscrit, localisée en CH (art. 8 al. 1) → le destinataire suisse déclare l'impôt sur les acquisitions (art. 45)." },
+      { "subject": "Finance", "title": "% de contrôle et % d'intérêt", "file": "quiz/2026-06-28-finance-controle-interet.html", "rappel": "% de contrôle = droits de vote (détermine la méthode). % d'intérêt = part économique réelle, en multipliant les pourcentages le long de la chaîne." }
+    ],
+    "2026-06-29": [
+      { "subject": "TVA", "title": "Changement d'affectation & PASM", "file": "quiz/2026-06-29-tva-changement-affectation-pasm.html", "rappel": "PASM (art. 31) : on rend de l'IP quand un bien passe vers une activité sans droit à déduction. DUIP (art. 32) : on récupère de l'IP dans le sens inverse." },
+      { "subject": "Finance", "title": "Leasing (RPC 13) & dépréciation (RPC 20)", "file": "quiz/2026-06-29-finance-leasing-depreciation.html", "rappel": "Leasing financier = immobilisation au bilan ; leasing d'exploitation = charges. Dépréciation = valeur comptable − valeur réalisable (max marché net / utilité)." }
+    ],
+    "2026-06-30": [
+      { "subject": "TVA", "title": "La facture (art. 26)", "file": "quiz/2026-06-30-tva-facture.html", "rappel": "Mentions : fournisseur + n° IDE, destinataire, date/période, genre-objet de la prestation, contre-prestation, taux et montant. Formalisme atténué depuis 2010." },
+      { "subject": "Finance", "title": "Écritures de consolidation du capital", "file": "quiz/2026-06-30-finance-ecritures-consolidation.html", "rappel": "On élimine la participation de la mère contre les capitaux propres de la filiale à l'acquisition ; l'écart devient goodwill (ou badwill)." }
+    ],
+    "2026-07-01": [
+      { "subject": "TVA", "title": "Livraison vs prestation de services", "file": "quiz/2026-07-01-tva-livraison-vs-prestation.html", "rappel": "Livraison (art. 3 let. d) : vente, travaux sur un bien, location. Prestation de services (let. e) : tout le reste. Distinction décisive pour le lieu." },
+      { "subject": "Finance", "title": "Bénéfice interne sur immobilisation", "file": "quiz/2026-07-01-finance-benefice-interne-immobilisation.html", "rappel": "On élimine le bénéfice interne dans la valeur de l'immo ET on corrige le sur-amortissement qui en découle chaque année." }
+    ],
+    "2026-07-02": [
+      { "subject": "TVA", "title": "Pluralité de prestations (art. 19)", "file": "quiz/2026-07-02-tva-pluralite-prestations.html", "rappel": "Règle des 70 % : si une prestation prépondérante atteint 70 % de la contre-prestation, tout l'ensemble peut suivre son régime (taux/lieu)." },
+      { "subject": "Finance", "title": "Du BC1 au BC2", "file": "quiz/2026-07-02-finance-bc1-bc2.html", "rappel": "BC1 = cumul des bilans + élimination de la participation à l'acquisition. BC2 = répartition des variations de CP depuis l'acquisition (groupe / minoritaires)." }
+    ],
+    "2026-07-03": [
+      { "subject": "TVA", "title": "Les taux d'imposition (art. 25)", "file": "quiz/2026-07-03-tva-taux.html", "rappel": "Depuis 2024 : normal 8,1 %, réduit 2,6 % (alimentation, livres, médicaments), spécial hébergement 3,8 %." },
+      { "subject": "Finance", "title": "Mise en équivalence (PIM / MEE)", "file": "quiz/2026-07-03-finance-mise-en-equivalence.html", "rappel": "Participation en une ligne, à la quote-part des CP de l'associée. Valeur = coût + quote-parts de résultats − dividendes reçus." }
+    ],
+    "2026-07-04": [
+      { "subject": "TVA", "title": "Méthode effective vs TDFN", "file": "quiz/2026-07-04-tva-methode-tdfn.html", "rappel": "TDFN : taux forfaitaire de branche appliqué au CA TTC, sans décompter l'IP. Limites : CA ≤ 5'024'000 et impôt ≤ 108'000 par an. Décompte semestriel." },
+      { "subject": "Finance", "title": "Stocks (RPC 17)", "file": "quiz/2026-07-04-finance-rpc-17-stocks.html", "rappel": "Évaluation au plus bas du coût et de la valeur nette de réalisation. FIFO et coût moyen pondéré admis, pas le LIFO." }
+    ],
+    "2026-07-05": [
+      { "subject": "TVA", "title": "Parts privées véhicules", "file": "quiz/2026-07-05-tva-parts-privees-vehicules.html", "rappel": "Forfait : 0,9 %/mois du prix d'achat HT (min. 150/mois), soit 10,8 %/an, TVA due au taux normal. Méthode effective possible (carnet de bord)." },
+      { "subject": "Finance", "title": "Immobilisations corporelles (RPC 18)", "file": "quiz/2026-07-05-finance-rpc-18-immobilisations.html", "rappel": "Coût d'acquisition/production − amortissements (sur la durée d'utilité) − dépréciations. Amélioration = activée ; entretien = charge." }
+    ],
+    "2026-07-06": [
+      { "subject": "TVA", "title": "Qualification d'opérations (cas pratique)", "file": "quiz/2026-07-06-tva-qualification-cas.html", "rappel": "Méthode en 3 temps : nature (art. 3) → lieu (art. 7/8) → traitement (imposable / exonéré art. 23 / exclu art. 21). Toujours citer l'article." },
+      { "subject": "Finance", "title": "Incorporelles (RPC 10) & provisions (RPC 23)", "file": "quiz/2026-07-06-finance-rpc-10-23.html", "rappel": "Incorporel activable si identifiable, contrôlé, profit futur mesurable. Provision = engagement probable, issu d'un événement passé, estimable de façon fiable." }
+    ],
+    "2026-07-07": [
+      { "subject": "Finance", "title": "Examen blanc — CC 2023 (consolidation)", "file": "quiz/2026-07-07-finance-examen-blanc-cc2023.html", "rappel": "Vraies questions de l'examen du 06.11.2023 : contrôle, évaluation des titres, définition du groupe, composantes des comptes consolidés, goodwill." }
+    ],
+    "2026-07-08": [
+      { "subject": "TVA", "title": "Examen blanc — objet, lieu, taux", "file": "quiz/2026-07-08-tva-examen-blanc-objet-lieu.html", "rappel": "Cas réels des exercices : qualifier (LB/PS), localiser (art. 7/8), traiter (taux, exclu art. 21, non-contre-prestation art. 18)." }
+    ]
+  }
+}
